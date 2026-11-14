@@ -1,0 +1,7 @@
+# Ignore all credentials and vaults
+PORTAL_CREDENTIALS_SECURE_VAULT.md
+*credentials_vault*
+*.vault
+.env*
+*.key
+*.pem
