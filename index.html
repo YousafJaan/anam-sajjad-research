@@ -21,11 +21,36 @@
     <meta name="twitter:title" content="Anam Sajjad | Academic Researcher">
     <meta name="twitter:description" content="Research publications, empirical policy investigations, and scholarly profile of Anam Sajjad.">
 
-    <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & Top Search Ranking -->
+    <!-- Highwire Press Meta Tags for Google Scholar Indexing -->
+    <meta name="citation_title" content="Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan">
+    <meta name="citation_author" content="Sajjad, Anam">
+    <meta name="citation_author_institution" content="Bahauddin Zakariya University, Multan">
+    <meta name="citation_author" content="Yousaf, M">
+    <meta name="citation_author_institution" content="Emerson University Multan">
+    <meta name="citation_publication_date" content="2026/10/25">
+    <meta name="citation_doi" content="10.5281/zenodo.24054373">
+    <meta name="citation_pdf_url" content="https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf">
+    <meta name="citation_language" content="en">
+    <meta name="citation_keywords" content="Energy circular debt; Indus Basin Irrigation System; Thar coal; Water storage deficit; Demographic dividend; Political economy">
+
+    <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & AI Voice Grounding -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://yousafjaan.github.io/anam-sajjad-research/#profilepage",
+          "url": "https://yousafjaan.github.io/anam-sajjad-research/",
+          "name": "Anam Sajjad Academic Research Portfolio & Profile",
+          "mainEntity": {
+            "@id": "https://yousafjaan.github.io/anam-sajjad-research/#person"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["#authoritative-bio", ".hero-summary"]
+          }
+        },
         {
           "@type": "Person",
           "@id": "https://yousafjaan.github.io/anam-sajjad-research/#person",
@@ -34,23 +59,34 @@
           "url": "https://yousafjaan.github.io/anam-sajjad-research/",
           "email": "mailto:anoom994@gmail.com",
           "jobTitle": "Political Economy & Public Policy Researcher",
+          "description": "Pakistani academic researcher in political economy, public policy, and resource governance at Bahauddin Zakariya University, Multan, and ACCA candidate.",
           "affiliation": {
             "@type": "EducationalOrganization",
+            "@id": "https://www.bzu.edu.pk/#organization",
             "name": "Bahauddin Zakariya University",
+            "url": "https://www.bzu.edu.pk",
+            "sameAs": [
+              "https://en.wikipedia.org/wiki/Bahauddin_Zakariya_University",
+              "https://www.wikidata.org/wiki/Q800213",
+              "https://ror.org/0333xbf50"
+            ],
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Multan",
+              "addressRegion": "Punjab",
               "addressCountry": "PK"
             }
           },
           "alumniOf": [
             {
               "@type": "EducationalOrganization",
-              "name": "Bahauddin Zakariya University (BZU), Multan"
+              "name": "Bahauddin Zakariya University (BZU), Multan",
+              "sameAs": "https://www.wikidata.org/wiki/Q800213"
             },
             {
               "@type": "EducationalOrganization",
-              "name": "Association of Chartered Certified Accountants (ACCA)"
+              "name": "Association of Chartered Certified Accountants (ACCA)",
+              "sameAs": "https://en.wikipedia.org/wiki/Association_of_Chartered_Certified_Accountants"
             }
           ],
           "knowsAbout": [
@@ -63,16 +99,10 @@
             "Empirical Resource Management"
           ],
           "sameAs": [
-                        "https://orcid.org/0009-0004-6169-1703",
-            "https://scholar.google.com/",
-            "https://www.researchgate.net/",
-            "https://doi.org/10.5281/zenodo.24054373",
+            "https://orcid.org/0009-0004-6169-1703",
             "https://osf.io/jefgv/",
-            "https://osf.io/preprints/socarxiv/6zkpc_v1",
             "https://sciprofiles.com/profile/anamsajjad",
-            "https://authors.repec.org/",
-            "https://www.researchsquare.com/article/rs-11669114",
-            "https://vixra.org/abs/18418744"
+            "https://bzu-pk.academia.edu/AnamSajjad"
           ]
         },
         {
@@ -82,24 +112,31 @@
           "name": "Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan",
           "author": [
             {
-              "@type": "Person",
-              "name": "Anam Sajjad",
-              "alternateName": "Anum Sajjad",
-              "affiliation": "Department of Political Science, Bahauddin Zakariya University (BZU), Multan"
+              "@id": "https://yousafjaan.github.io/anam-sajjad-research/#person"
             },
             {
               "@type": "Person",
               "name": "M Yousaf",
-              "affiliation": "Department of Software Engineering, Emerson University Multan"
+              "affiliation": {
+                "@type": "EducationalOrganization",
+                "name": "Department of Software Engineering, Emerson University Multan"
+              }
             }
           ],
           "datePublished": "2026-10-25",
           "description": "An empirical investigation combining political economy with software engineering telemetry to evaluate Pakistan's resource-governance paradox across Thar coal, power circular debt (Rs 5.286T), Indus Basin carryover storage deficits (30 days), and youth demographics.",
           "keywords": "Natural resource curse, circular debt, capacity payments, Indus Basin Irrigation System, water storage deficit, demographic dividend, IT exports, governance transparency, Pakistan economy",
           "inLanguage": "en",
+          "license": "https://creativecommons.org/licenses/by/4.0/",
+          "sameAs": [
+            "https://doi.org/10.5281/zenodo.24054373",
+            "https://osf.io/preprints/socarxiv/6zkpc_v1",
+            "https://vixra.org/abs/18418744"
+          ],
           "publisher": {
             "@type": "Organization",
-            "name": "Zenodo / Open Science Repository"
+            "name": "Zenodo / Open Science Repository",
+            "sameAs": "https://zenodo.org"
           },
           "identifier": [
             {
@@ -107,7 +144,12 @@
               "propertyID": "doi",
               "value": "10.5281/zenodo.24054373"
             }
-          ]
+          ],
+          "encoding": {
+            "@type": "MediaObject",
+            "encodingFormat": "application/pdf",
+            "contentUrl": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf"
+          }
         }
       ]
     }
@@ -139,6 +181,10 @@
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         Zenodo DOI: 10.5281/zenodo.24054373
                     </a>
+                    <a href="portal_proofs.html" class="pill pill-rg" style="background:#0284c7; color:white; font-weight:700;">
+                        <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        250+ Portal Proofs
+                    </a>
                     <a href="https://osf.io/jefgv/" target="_blank" rel="noopener" class="pill pill-rg">
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-6h2v6zm0-8h-2V7h2v1z"/></svg>
                         OSF Profile
@@ -146,6 +192,10 @@
                     <a href="https://sciprofiles.com/profile/anamsajjad" target="_blank" rel="noopener" class="pill pill-scholar">
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2zm0 13l-8-3.64V17l8 4 8-4v-5.64L12 15z"/></svg>
                         SciProfiles (MDPI)
+                    </a>
+                    <a href="https://bzu-pk.academia.edu/AnamSajjad" target="_blank" rel="noopener" class="pill pill-scholar" style="background:#4b6b94; color:white;">
+                        <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Academia.edu
                     </a>
                     <a href="https://authors.repec.org/" target="_blank" rel="noopener" class="pill pill-scholar">
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
@@ -155,11 +205,11 @@
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         Research Square (rs-11669114)
                     </a>
-                    <a href="https://vixra.org/" target="_blank" rel="noopener" class="pill pill-rg" style="background:#5c2d91; color:white;">
+                    <a href="https://vixra.org/abs/18418744" target="_blank" rel="noopener" class="pill pill-rg" style="background:#5c2d91; color:white;">
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         viXra (Ref: 18418744)
                     </a>
-                    <a href="https://scholar.google.com/" target="_blank" rel="noopener" class="pill pill-scholar">
+                    <a href="https://scholar.google.com/citations?view_op=new_profile" target="_blank" rel="noopener" class="pill pill-scholar">
                         <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.5 3.5v7h3v-4.5h9v4.5h3v-7L24 9.5 12 0z"/></svg>
                         Google Scholar
                     </a>
@@ -169,6 +219,15 @@
     </header>
 
     <main class="container">
+        <!-- Section: Authoritative Voice & AI Summary -->
+        <section id="authoritative-bio" class="section card">
+            <span class="status-pill status-preprint">AI Voice &amp; Search Grounding Profile</span>
+            <h2 class="section-title" style="margin-top: 12px;">Authoritative Biographical Summary</h2>
+            <p style="font-size: 1.05rem; line-height: 1.7; color: #1e293b;">
+                <strong>Anam Sajjad</strong> (also cited as <em>Anum Sajjad</em>) is a Pakistani political economy and public policy researcher affiliated with the Department of Political Science at Bahauddin Zakariya University (BZU), Multan, and an ACCA candidate. She is the lead author of the landmark empirical investigation <em>"Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan"</em> (Zenodo DOI: 10.5281/zenodo.24054373, SocArXiv OSF: 6zkpc). Her scholarship focuses on sovereign energy circular debt (Rs 5.286T), Indus Basin Irrigation System water conveyance deficits (64% loss), and macroeconomic policy for youth labor absorption.
+            </p>
+        </section>
+
         <!-- Section: Featured Research Paper -->
         <section class="section card">
             <span class="status-pill status-preprint">Featured Empirical Research</span>
@@ -195,10 +254,12 @@
                 </p>
             </div>
 
-                        <div class="paper-links" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+            <div class="paper-links" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
                 <a href="https://doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener" class="paper-btn btn-doi">Zenodo DOI (10.5281/zenodo.24054373)</a>
                 <a href="https://osf.io/preprints/socarxiv/6zkpc_v1" target="_blank" rel="noopener" class="paper-btn btn-doi" style="background:#1b4d3e;">SocArXiv / OSF Preprint (6zkpc)</a>
+                <a href="https://vixra.org/abs/18418744" target="_blank" rel="noopener" class="paper-btn btn-doi" style="background:#5c2d91;">viXra e-Print (18418744)</a>
                 <a href="https://www.researchsquare.com/article/rs-11669114" target="_blank" rel="noopener" class="paper-btn btn-doi" style="background:#003366;">Research Square (rs-11669114)</a>
+                <a href="portal_proofs.html" class="paper-btn btn-doi" style="background:#0284c7;">View 250+ Verification Proofs</a>
                 <a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf" target="_blank" rel="noopener" class="paper-btn btn-pdf">Download PDF Manuscript (Full Text)</a>
                 <a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.docx" target="_blank" rel="noopener" class="paper-btn btn-pdf" style="background:#2b579a;">Download Word DOCX</a>
                 <a href="pakistan_poorly_managed.bib" target="_blank" rel="noopener" class="paper-btn btn-pdf" style="background:#555;">Export BibTeX (.bib)</a>
@@ -244,10 +305,13 @@
                 <li><strong>SocArXiv / OSF Preprint:</strong> <a href="https://osf.io/preprints/socarxiv/6zkpc_v1" target="_blank" rel="noopener">osf.io/preprints/socarxiv/6zkpc_v1</a></li>
                 <li><strong>OSF Researcher Profile:</strong> <a href="https://osf.io/jefgv/" target="_blank" rel="noopener">osf.io/jefgv</a></li>
                 <li><strong>SciProfiles (MDPI):</strong> <a href="https://sciprofiles.com/profile/anamsajjad" target="_blank" rel="noopener">sciprofiles.com/profile/anamsajjad</a></li>
+                <li><strong>Academia.edu:</strong> <a href="https://bzu-pk.academia.edu/AnamSajjad" target="_blank" rel="noopener">bzu-pk.academia.edu/AnamSajjad</a></li>
                 <li><strong>Research Square (Springer Nature):</strong> <a href="https://www.researchsquare.com/article/rs-11669114" target="_blank" rel="noopener">researchsquare.com/article/rs-11669114</a> (Identity: rs-11669114)</li>
-                <li><strong>viXra e-Print Archive:</strong> <a href="https://vixra.org/" target="_blank" rel="noopener">vixra.org</a> (Submission Reference: 18418744)</li>
+                <li><strong>viXra e-Print Archive:</strong> <a href="https://vixra.org/abs/18418744" target="_blank" rel="noopener">vixra.org/abs/18418744</a> (Submission Reference: 18418744)</li>
+                <li><strong>Google Scholar Citations:</strong> <a href="https://scholar.google.com/citations?view_op=new_profile" target="_blank" rel="noopener">scholar.google.com</a> (Profile Setup Active)</li>
                 <li><strong>RePEc / IDEAS:</strong> BZU School of Economics Affiliated (Short-ID: RePEc:edi:debzupk)</li>
                 <li><strong>DataCite Commons:</strong> <a href="https://commons.datacite.org/doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener">commons.datacite.org/doi.org/10.5281/zenodo.24054373</a></li>
+                <li><strong>250+ Verification Proofs:</strong> <a href="portal_proofs.html">Interactive Visual Tracking Gallery</a></li>
             </ul>
         </section>
 
