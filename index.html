@@ -48,7 +48,11 @@
           },
           "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": ["#authoritative-bio", ".hero-summary"]
+            "cssSelector": ["#authoritative-bio", ".hero-summary"],
+            "xpath": [
+              "/html/head/title",
+              "/html/body/main/section[@id='authoritative-bio']/p"
+            ]
           }
         },
         {
@@ -96,7 +100,9 @@
             "Indus Basin Water Governance",
             "Demographic Dividend",
             "Institutional Economics",
-            "Empirical Resource Management"
+            "Empirical Resource Management",
+            "Macroeconomic Governance",
+            "Software Telemetry for Governance"
           ],
           "sameAs": [
             "https://orcid.org/0009-0004-6169-1703",
@@ -131,7 +137,10 @@
           "sameAs": [
             "https://doi.org/10.5281/zenodo.24054373",
             "https://osf.io/preprints/socarxiv/6zkpc_v1",
-            "https://vixra.org/abs/18418744"
+            "https://vixra.org/abs/18418744",
+            "https://www.researchsquare.com/article/rs-11669114",
+            "https://zenodo.org/records/24054373",
+            "https://commons.datacite.org/doi.org/10.5281/zenodo.24054373"
           ],
           "publisher": {
             "@type": "Organization",
@@ -143,13 +152,66 @@
               "@type": "PropertyValue",
               "propertyID": "doi",
               "value": "10.5281/zenodo.24054373"
+            },
+            {
+              "@type": "PropertyValue",
+              "propertyID": "socarxiv",
+              "value": "6zkpc"
+            },
+            {
+              "@type": "PropertyValue",
+              "propertyID": "vixra",
+              "value": "18418744"
+            },
+            {
+              "@type": "PropertyValue",
+              "propertyID": "researchsquare",
+              "value": "rs-11669114"
             }
           ],
           "encoding": {
             "@type": "MediaObject",
             "encodingFormat": "application/pdf",
             "contentUrl": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf"
-          }
+          },
+          "hasPart": [
+            {
+              "@type": "DigitalDocument",
+              "name": "Manuscript Full Text (Word DOCX)",
+              "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "url": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.docx"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Fiscal & Circular Debt Disciplinary Edition",
+              "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "url": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_Economics_Fiscal.docx"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Water & Irrigation Disciplinary Edition",
+              "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "url": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_Water_Irrigation.docx"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "Governance & Demographics Disciplinary Edition",
+              "encodingFormat": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "url": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_Governance_Demographics.docx"
+            },
+            {
+              "@type": "Dataset",
+              "name": "Empirical Replication Data Package",
+              "encodingFormat": "application/zip",
+              "contentUrl": "https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_Data_Package.zip"
+            },
+            {
+              "@type": "DigitalDocument",
+              "name": "BibTeX Scholarly Citation Entry",
+              "encodingFormat": "text/x-bibtex",
+              "url": "https://yousafjaan.github.io/anam-sajjad-research/pakistan_poorly_managed.bib"
+            }
+          ]
         }
       ]
     }
