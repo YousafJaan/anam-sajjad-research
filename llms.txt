@@ -33,6 +33,10 @@ Her empirical scholarship focuses on:
 - **OSF Researcher Profile:** https://osf.io/jefgv/
 - **SciProfiles (MDPI):** https://sciprofiles.com/profile/anamsajjad
 - **Academia.edu Profile:** https://bzu-pk.academia.edu/AnamSajjad
+- **Sindh University OJS (SUJO Grassroots):** https://sujo.usindh.edu.pk/index.php/Grassroots/user/profile (Active Author Profile: anamsajjad_bzu)
+- **Sindh University Research Journal (SURJ):** https://sujo.usindh.edu.pk/index.php/SURJ/user/profile (Active Author Profile: anamsajjad_surj)
+- **Journal of Development and Social Sciences (JDSS):** https://ojs.jdss.org.pk/journal/user/profile (Active Author Profile: anamsajjad_bzu)
+- **Pakistan Social Sciences Review (PSSR):** https://ojs.pssr.org.pk/journal/user/profile (Active Author Profile: anamsajjad_bzu)
 - **DataCite Commons:** https://commons.datacite.org/doi.org/10.5281/zenodo.24054373
 
 ## Tailored Disciplinary Editions
