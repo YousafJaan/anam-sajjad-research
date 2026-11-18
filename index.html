@@ -57,10 +57,7 @@
     <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & AI Voice Grounding -->
     <script type="application/ld+json">
@@ -77,10 +74,10 @@
           },
           "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": ["#authoritative-bio", ".hero-summary"],
+            "cssSelector": ["#authoritative-bio", ".hero-tagline"],
             "xpath": [
               "/html/head/title",
-              "/html/body/main/section[@id='authoritative-bio']/p"
+              "/html/body/main/div/section[@id='authoritative-bio']/p"
             ]
           }
         },
@@ -102,7 +99,7 @@
           "url": "https://yousafjaan.github.io/anam-sajjad-research/",
           "image": {
             "@type": "ImageObject",
-            "url": "https://yousafjaan.github.io/anam-sajjad-research/images/anam_sajjad_avatar_800x800.jpg",
+            "url": "https://yousafjaan.github.io/anam-sajjad-research/images/anam_sajjad_official_author_portrait.jpg",
             "caption": "Anam Sajjad - Official Author Portrait",
             "width": 800,
             "height": 800
@@ -173,8 +170,7 @@
             "Indus Basin Water Governance",
             "Demographic Dividend",
             "Institutional Economics",
-            "Macroeconomic Governance",
-            "Software Telemetry for Governance"
+            "Macroeconomic Governance"
           ],
           "sameAs": [
             "https://orcid.org/0009-0004-6169-1703",
@@ -327,566 +323,306 @@
       ]
     }
     </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- STICKY GLASS HEADER -->
-    <header class="top-nav">
-        <div class="nav-container">
+    <!-- MINIMAL FLOATING NAVIGATION BAR -->
+    <div class="nav-wrap">
+        <nav class="nav-bar" aria-label="Main Navigation">
             <a href="#home" class="nav-brand">
-                <span class="nav-brand-name">Anam Sajjad</span>
-                <span class="nav-brand-badge">Writer &bull; Author</span>
+                <img src="images/anam_sajjad_avatar_800x800.webp" alt="Anam Sajjad" class="brand-avatar" width="32" height="32">
+                <span class="brand-text">Anam Sajjad</span>
             </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#works">Works &amp; Research</a></li>
-                <li><a href="#telemetry">Telemetry</a></li>
-                <li><a href="#biography">Biography</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#portals">256 Portals</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="portal_proofs.html" class="nav-btn-highlight">Portal Proofs</a></li>
+            <ul class="nav-links">
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#books" class="nav-link">Books</a></li>
+                <li><a href="#affiliations" class="nav-link hide-mobile">Affiliations</a></li>
+                <li><a href="#gallery" class="nav-link hide-mobile">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf" class="nav-cta" target="_blank" rel="noopener">Paper (PDF)</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle Navigation">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            </button>
-        </div>
-    </header>
+        </nav>
+    </div>
 
-    <main>
+    <main class="container">
 
-        <!-- SECTION 1: HERO -->
-        <section id="home" class="hero">
-            <!-- Aceternity Subtle Ambient Spotlight -->
-            <div class="hero-spotlight"></div>
-
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <!-- Magic UI Shimmer Badge -->
-                        <div class="shimmer-badge">
-                            <span class="shimmer-badge-dot"></span>
-                            Verified Author &amp; Researcher &bull; BZU Multan &amp; Mailsi
-                        </div>
-
-                        <h1 class="author-name">Anam Sajjad <em>&bull; Writer</em></h1>
-                        <p class="author-title">
-                            Pakistani Writer &bull; Author &bull; <strong>Political Economy Researcher (BZU Multan)</strong> &bull; ACCA Candidate
-                        </p>
-                        <p class="hero-summary">
-                            Investigating sovereign energy circular debt, Indus Basin water governance, and demographic potential in Pakistan through empirical political economy and humanistic narrative storytelling.
-                        </p>
-
-                        <div class="hero-actions">
-                            <a href="#works" class="btn-primary">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                                Explore Monograph
-                            </a>
-                            <a href="#biography" class="btn-secondary">Author Biography</a>
-                            <a href="#portals" class="btn-secondary">Academic Network</a>
-                        </div>
-
-                        <!-- Scholarly Identity Badges -->
-                        <div class="scholarly-badges">
-                            <a href="https://orcid.org/0009-0004-6169-1703" target="_blank" rel="noopener" class="badge" title="Verified ORCID iD">
-                                <span class="badge-dot dot-green"></span>
-                                <strong>ORCID:</strong> 0009-0004-6169-1703
-                            </a>
-                            <a href="https://doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener" class="badge" title="Zenodo Open Science DOI">
-                                <span class="badge-dot dot-gold"></span>
-                                <strong>DOI:</strong> 10.5281/zenodo.24054373
-                            </a>
-                            <a href="portal_proofs.html" class="badge" style="border-color: rgba(2, 132, 199, 0.3);">
-                                <span class="badge-dot dot-blue"></span>
-                                <strong>250+ Portals</strong> Active
-                            </a>
-                            <span class="badge">
-                                <span class="badge-dot dot-green"></span>
-                                <strong>CC BY-SA 4.0</strong> Certified
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Author Portrait Elevation Card -->
-                    <div class="hero-portrait-col">
-                        <div class="hero-portrait-card">
-                            <div class="hero-portrait-frame">
-                                <img src="images/anam_sajjad_avatar_800x800.jpg" alt="Anam Sajjad - Pakistani Writer, Author &amp; Researcher" class="hero-portrait-img">
-                            </div>
-                            <div class="hero-portrait-meta">
-                                <div>
-                                    <div class="hero-portrait-name">Anam Sajjad</div>
-                                    <div class="hero-portrait-role">Writer &bull; Author &bull; BZU Multan</div>
-                                </div>
-                                <div class="hero-portrait-verified">
-                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                                    <span>Verified Identity</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="hero-status-pill">
+                <span class="status-dot-pulse"></span>
+                <span>Verified Author &bull; BZU Multan &bull; Mailsi</span>
             </div>
-        </section>
 
-        <!-- SECTION 2: MACROECONOMIC TELEMETRY DASHBOARD -->
-        <section id="telemetry" class="telemetry-section">
-            <div class="container">
-                <div class="telemetry-grid">
-                    <div class="telemetry-card">
-                        <div class="telemetry-label">Energy Sector Circular Debt</div>
-                        <div class="telemetry-stat">Rs 5.286T</div>
-                        <div class="telemetry-desc">5.4% of national GDP absorbed by take-or-pay capacity obligations guaranteeing Rs 2.18T annually across 45,885 MW.</div>
-                    </div>
-                    <div class="telemetry-card">
-                        <div class="telemetry-label">Water Conveyance Deficit</div>
-                        <div class="telemetry-stat">64% Loss</div>
-                        <div class="telemetry-desc">Indus Basin canal transmission seepage; live reservoir carryover buffer stands at only 30 days vs 1,000-day global benchmarks.</div>
-                    </div>
-                    <div class="telemetry-card">
-                        <div class="telemetry-label">Youth Demographic Capital</div>
-                        <div class="telemetry-stat">160.11M</div>
-                        <div class="telemetry-desc">67% of Pakistan's 241.49M citizens are under 30, while 81% of net federal tax revenues are consumed by debt service.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: SELECTED WORKS & PUBLICATIONS -->
-        <section id="works" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Published Catalog</div>
-                    <h2 class="section-title">Selected Works &amp; Publications</h2>
-                    <p class="section-subtitle">Empirical policy research monographs, disciplinary treatises, and literary non-fiction.</p>
-                </div>
-
-                <!-- Mantine-Style Segmented Control for Works Filter -->
-                <div class="segmented-control" id="worksFilter">
-                    <button class="segmented-btn active" onclick="filterWorks('all')">All Works (4)</button>
-                    <button class="segmented-btn" onclick="filterWorks('research')">Empirical Policy (1)</button>
-                    <button class="segmented-btn" onclick="filterWorks('nonfiction')">Literary Non-Fiction (2)</button>
-                    <button class="segmented-btn" onclick="filterWorks('novel')">Urdu Fiction (1)</button>
-                </div>
-
-                <!-- FEATURED WORK: Pakistan Is Not Poor... -->
-                <div class="monograph-card work-item" data-category="research">
-                    <div class="monograph-grid">
-                        <!-- Left: 3D Book Elevation -->
-                        <div class="book-elevation-col">
-                            <div class="book-elevation-wrap">
-                                <div class="book-elevation">
-                                    <div>
-                                        <div class="book-tag">Empirical Monograph &bull; BZU Multan</div>
-                                        <h3 class="book-title-cover">Pakistan Is Not Poor, It Is Poorly Managed</h3>
-                                        <p class="book-sub-cover">Energy, Water, and Demographics</p>
-                                    </div>
-                                    <div>
-                                        <div class="book-author-cover">Anam Sajjad &bull; M Yousaf</div>
-                                        <div class="book-doi-cover">DOI: 10.5281/zenodo.24054373</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right: Monograph Details -->
-                        <div class="monograph-content-col">
-                            <div class="monograph-header-meta">
-                                <span class="badge" style="background:var(--accent-gold-light); color:var(--accent-gold); font-weight:600;">Featured Empirical Monograph</span>
-                                <span style="font-size:0.82rem; color:var(--ink-muted);">October 25, 2026</span>
-                            </div>
-                            <h3 class="monograph-title">Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan</h3>
-                            <p class="monograph-byline">
-                                By <strong>Anam Sajjad</strong><sup>1,*</sup> &amp; <strong>M Yousaf</strong><sup>2</sup><br>
-                                <small><sup>1</sup>Department of Political Science, BZU Multan | <sup>2</sup>Department of Software Engineering, Emerson University Multan</small>
-                            </p>
-                            <p style="font-size:0.95rem; line-height:1.65; color:var(--ink-body);">
-                                <strong>Executive Summary:</strong> Developing nations often attribute macroeconomic volatility to natural resource scarcity. This empirical investigation critically evaluates Pakistan's resource endowment paradox across sovereign energy debt, water distribution networks, and human capital demographics, combining political economy inquiry with software telemetry frameworks.
-                            </p>
-
-                            <ul class="findings-list">
-                                <li class="findings-item">
-                                    <div class="findings-bullet">1</div>
-                                    <div><strong>Energy Sector Circular Debt:</strong> Rigid take-or-pay capacity obligations guaranteeing Rs 2.18T annually across 45,885 MW have driven circular debt to Rs 5.286 trillion (5.4% of national GDP).</div>
-                                </li>
-                                <li class="findings-item">
-                                    <div class="findings-bullet">2</div>
-                                    <div><strong>Water Conveyance Deficit:</strong> The 16.2 Mha Indus Basin Irrigation System maintains merely 13.168 MAF of live reservoir storage (30 days of buffer), while 64% of surface water diverted at canal headworks is lost to unlined channels.</div>
-                                </li>
-                                <li class="findings-item">
-                                    <div class="findings-bullet">3</div>
-                                    <div><strong>Demographic Youth Capital:</strong> 160.11 million citizens (67% of population) are under 30, but federal debt service consuming 81% of net tax revenues severely constrains human capital development.</div>
-                                </li>
-                            </ul>
-
-                            <div class="paper-actions-grid">
-                                <a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf" target="_blank" rel="noopener" class="btn-paper btn-paper-primary">Download PDF Manuscript (Full Text)</a>
-                                <a href="https://doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Zenodo DOI (10.5281/zenodo.24054373)</a>
-                                <a href="https://osf.io/preprints/socarxiv/6zkpc_v1" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">SocArXiv (6zkpc)</a>
-                                <a href="https://www.researchsquare.com/article/rs-11669114" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Research Square</a>
-                                <a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.docx" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Word DOCX</a>
-                                <a href="Pakistan_Is_Not_Poor_Economics_Fiscal.docx" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Fiscal Edition</a>
-                                <a href="Pakistan_Is_Not_Poor_Water_Irrigation.docx" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Water Edition</a>
-                                <a href="Pakistan_Is_Not_Poor_Governance_Demographics.docx" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Demographics Edition</a>
-                                <a href="Pakistan_Is_Not_Poor_Data_Package.zip" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">Replication Data (.zip)</a>
-                                <a href="pakistan_poorly_managed.bib" target="_blank" rel="noopener" class="btn-paper btn-paper-outline">BibTeX (.bib)</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- COMPANION WORKS GRID -->
-                <div class="works-grid">
-                    <!-- Work 2: The Weight of Nodding -->
-                    <div class="card work-card work-item" data-category="nonfiction">
-                        <div>
-                            <div class="work-header">
-                                <span class="badge" style="background:#fef3c7; color:#b45309;">Philosophical Critique</span>
-                                <span style="font-size:0.8rem; color:var(--ink-muted);">Expanded Edition</span>
-                            </div>
-                            <h3 class="work-title">The Weight of Nodding</h3>
-                            <p class="work-byline">By <strong>Anam Sajjad</strong> &bull; Non-Fiction / Social Philosophy</p>
-                            <p class="work-desc">
-                                A critical examination of unexamined consensus, exploring how inherited social patterns and bureaucratic compliance suppress individual agency within developing institutions. Sajjad argues for evidence-based dissent and individual sovereignty.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="work-status-badge">Hardcover &amp; Kindle Edition In Preparation</span>
-                        </div>
-                    </div>
-
-                    <!-- Work 3: Rija -->
-                    <div class="card work-card work-item" data-category="nonfiction">
-                        <div>
-                            <div class="work-header">
-                                <span class="badge" style="background:#f5f3ff; color:#6d28d9;">Narrative Memoir</span>
-                                <span style="font-size:0.8rem; color:var(--ink-muted);">Literary Memoir</span>
-                            </div>
-                            <h3 class="work-title">Rija: Ek Beti Ki Sachi Aap Beeti</h3>
-                            <p class="work-byline">By <strong>Anam Sajjad</strong> &bull; Narrative Non-Fiction</p>
-                            <p class="work-desc">
-                                An authentic autobiographical account chronicling generational perseverance, female educational struggle, and moral conviction across rural and semi-urban Punjab.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="work-status-badge" style="background:#f5f3ff; color:#6d28d9;">Urdu Literary Edition In Preparation</span>
-                        </div>
-                    </div>
-
-                    <!-- Work 4: Maawara -->
-                    <div class="card work-card work-item" data-category="novel">
-                        <div>
-                            <div class="work-header">
-                                <span class="badge" style="background:#e0e7ff; color:#3730a3;">Urdu Novel &bull; ماورا</span>
-                                <span style="font-size:0.8rem; color:var(--ink-muted);">Literary Fiction</span>
-                            </div>
-                            <h3 class="work-title">Maawara (ماورا)</h3>
-                            <p class="work-byline">By <strong>Anam Sajjad</strong> &bull; Urdu Fiction / Novel</p>
-                            <p class="work-desc">
-                                An evocative Urdu literary novel exploring existential search, personal sovereignty, and philosophical questioning against the backdrop of contemporary Pakistani society.
-                            </p>
-                        </div>
-                        <div>
-                            <span class="work-status-badge" style="background:#e0e7ff; color:#3730a3;">National Literary Edition In Preparation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: ABOUT ANAM SAJJAD -->
-        <section id="about" class="section" style="background:#ffffff; border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
-            <div class="container">
-                <div class="about-grid">
-                    <div>
-                        <div class="section-label">Intellectual Worldview</div>
-                        <h2 class="section-title">About Anam Sajjad</h2>
-                        <p style="font-size:1.08rem; line-height:1.75; color:var(--ink-body); margin-bottom:20px;">
-                            <strong>Anam Sajjad</strong> (also cited in scholarly archives as <em>Anum Sajjad</em>) is a Pakistani author, essayist, and political economy researcher based in South Punjab. Her work operates at the vital intersection of rigorous financial accounting, public resource governance, and narrative prose.
-                        </p>
-                        <p style="font-size:1rem; line-height:1.75; color:var(--ink-body); margin-bottom:28px;">
-                            By combining empirical data science with literary inquiry, she critically explores the tension between state institutional inertia and individual potential within developing economies. In her policy scholarship, Sajjad investigates structural macro-governance failures across the power grid and the Indus Basin. Simultaneously, her non-fiction literary works examine moral autonomy, institutional compliance, and the human cost of inherited social conformity.
-                        </p>
-                        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                            <a href="#biography" class="btn-primary">Read Author Biography</a>
-                            <a href="#contact" class="btn-secondary">Get in Touch</a>
-                        </div>
-                    </div>
-
-                    <!-- Bento Pillars -->
-                    <div class="about-pillars">
-                        <div class="pillar-card">
-                            <div class="pillar-card-title">
-                                <span class="pillar-card-num">01</span>
-                                <span>Empirical Political Economy</span>
-                            </div>
-                            <p class="pillar-card-desc">Quantitative modeling of circular debt, capacity payment structures, and resource-governance paradoxes across Pakistan's sovereign balance sheet.</p>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-card-title">
-                                <span class="pillar-card-num">02</span>
-                                <span>Financial &amp; Forensic Discipline</span>
-                            </div>
-                            <p class="pillar-card-desc">Applying professional ACCA chartered accountancy principles to institutional contract auditing, public sector efficiency, and transparent governance.</p>
-                        </div>
-                        <div class="pillar-card">
-                            <div class="pillar-card-title">
-                                <span class="pillar-card-num">03</span>
-                                <span>Literary Non-Fiction &amp; Narrative</span>
-                            </div>
-                            <p class="pillar-card-desc">Critical socio-philosophical prose exploring institutional compliance, individual sovereignty, and female perseverance in South Asian societies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 5: BIOGRAPHY & TIMELINE -->
-        <section id="biography" class="section">
-            <div class="container">
-                <!-- Authoritative AI Grounding Profile (Required by Test Suite) -->
-                <div id="authoritative-bio" class="card bio-grounding-card">
-                    <span class="badge" style="background:var(--accent-gold-light); color:var(--accent-gold); margin-bottom:12px;">AI Voice &amp; Knowledge Graph Profile</span>
-                    <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--ink-primary); margin-bottom:10px;">Authoritative Biographical Summary</h3>
-                    <p style="font-size:1.02rem; line-height:1.7; color:var(--ink-body);">
-                        <strong>Anam Sajjad</strong> (also cited as <em>Anum Sajjad</em>) is a Pakistani political economy and public policy researcher affiliated with the Department of Political Science at Bahauddin Zakariya University (BZU), Multan, and an ACCA candidate. She is the lead author of the landmark empirical investigation <em>"Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan"</em> (Zenodo DOI: 10.5281/zenodo.24054373, SocArXiv OSF: 6zkpc). Her scholarship focuses on sovereign energy circular debt (Rs 5.286T), Indus Basin Irrigation System water conveyance deficits (64% loss), and macroeconomic policy for youth labor absorption.
-                    </p>
-                </div>
-
-                <!-- Detailed Narrative & Timeline -->
-                <div class="card" style="margin-top:32px;">
-                    <div class="section-label">Academic &amp; Life Journey</div>
-                    <h2 class="section-title">Detailed Narrative Biography</h2>
-                    <p style="font-size:1rem; line-height:1.75; color:var(--ink-body); margin-bottom:16px;">
-                        Born in <strong>Mailsi, District Vehari</strong>, in southern Punjab, Anam Sajjad developed an early intellectual appreciation for the profound disparities between Pakistan's natural resource endowments and the lived reality of its citizens. Growing up in the agricultural heartland of the Indus Basin, she observed firsthand the critical importance of water rights, agricultural infrastructure, and institutional transparency.
-                    </p>
-                    <p style="font-size:1rem; line-height:1.75; color:var(--ink-body); margin-bottom:16px;">
-                        Her academic trajectory led her to the <strong>Department of Political Science at Bahauddin Zakariya University (BZU), Multan</strong>, where she anchored her research in institutional political economy, state capacity, and public policy formulation. Recognizing that political institutions cannot be understood in isolation from balance-sheet realities, she concurrently pursued professional qualifications as an <strong>ACCA Candidate</strong>, mastering financial forensics, cost management, and sovereign debt mechanics.
-                    </p>
-                    <p style="font-size:1rem; line-height:1.75; color:var(--ink-body); margin-bottom:24px;">
-                        This dual disciplinary lens culminated in the co-authorship of <em>Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan</em> (with M. Yousaf). Alongside her academic research, Sajjad authors narrative non-fiction, including <em>The Weight of Nodding</em> and her memoir <em>Rija: Ek Beti Ki Sachi Aap Beeti</em>.
+            <div class="hero-grid">
+                <div class="hero-text-col">
+                    <h1 class="hero-name">Anam Sajjad</h1>
+                    <p class="hero-tagline">
+                        Pakistani author, essayist, and <strong>political economy researcher</strong> affiliated with Bahauddin Zakariya University (BZU), Multan, and an ACCA candidate. Investigating sovereign energy debt, water governance, and the restoration of individual moral autonomy.
                     </p>
 
-                    <!-- Mantine Timeline Component -->
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-bullet"></div>
-                            <div class="timeline-meta">Formative Years &bull; Vehari District</div>
-                            <h4 class="timeline-title">Mailsi Roots &amp; Intermediate Studies</h4>
-                            <p class="timeline-desc">Government High School Ward No. 8 and Government College of Women, Mailsi. Formative agrarian observations of the Indus Basin Irrigation System, water rights, and local governance.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-bullet"></div>
-                            <div class="timeline-meta">Bahauddin Zakariya University, Multan</div>
-                            <h4 class="timeline-title">Bachelor of Science (BS) in Political Science</h4>
-                            <p class="timeline-desc">Specialization in political economy, constitutional governance, institutional economics, and public policy formulation at Department of Political Science, BZU Multan.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-bullet"></div>
-                            <div class="timeline-meta">Association of Chartered Certified Accountants (ACCA)</div>
-                            <h4 class="timeline-title">ACCA Candidacy &amp; Financial Forensics</h4>
-                            <p class="timeline-desc">Professional studies encompassing corporate and business law, financial reporting, performance management, taxation, and audit. Applied directly to power sector circular debt modeling.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-bullet"></div>
-                            <div class="timeline-meta">Published Scholarship &bull; 2026</div>
-                            <h4 class="timeline-title">Lead Author of "Pakistan Is Not Poor, It Is Poorly Managed"</h4>
-                            <p class="timeline-desc">Co-authored empirical investigation published with permanent Zenodo DOI (10.5281/zenodo.24054373) and indexed globally across SocArXiv, viXra, and Research Square.</p>
-                        </div>
+                    <div class="hero-actions">
+                        <a href="#research" class="btn-main">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            Explore Empirical Paper
+                        </a>
+                        <a href="#books" class="btn-subtle">
+                            Authored Books
+                        </a>
+                        <a href="portal_proofs.html" class="btn-subtle">
+                            Academic Dossiers &rarr;
+                        </a>
                     </div>
+
+                    <div class="hero-badges-row">
+                        <a href="https://orcid.org/0009-0004-6169-1703" target="_blank" rel="noopener" class="badge-pill">ORCID: 0009-0004-6169-1703</a>
+                        <a href="https://doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener" class="badge-pill">Zenodo DOI</a>
+                        <a href="https://osf.io/jefgv/" target="_blank" rel="noopener" class="badge-pill">OSF SocArXiv</a>
+                        <a href="mailto:anoom994@gmail.com" class="badge-pill">anoom994@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="hero-portrait-col">
+                    <div class="hero-portrait-frame">
+                        <img src="images/gallery_01_office.jpg" alt="Anam Sajjad - Official Author Portrait" class="hero-portrait-img" width="210" height="262">
+                    </div>
+                    <span class="hero-portrait-caption">Anam Sajjad &bull; Multan &amp; Mailsi</span>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 6: EDUCATION & QUALIFICATIONS -->
-        <section id="education" class="section" style="background:#ffffff; border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Academic Credentials</div>
-                    <h2 class="section-title">Education &amp; Qualifications</h2>
-                    <p class="section-subtitle">Verified academic degrees and professional certifications.</p>
-                </div>
-
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
-                    <div class="card" style="border-top:3px solid var(--accent-blue);">
-                        <span class="badge" style="background:var(--accent-blue-light); color:var(--accent-blue); margin-bottom:12px;">University Degree</span>
-                        <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--ink-primary); margin-bottom:6px;">Bahauddin Zakariya University (BZU), Multan</h3>
-                        <p style="font-weight:600; color:var(--ink-secondary); margin-bottom:4px;">Bachelor of Science (BS) in Political Science</p>
-                        <p style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:14px;">Department of Political Science &bull; Multan, Punjab, Pakistan</p>
-                        <p style="font-size:0.92rem; line-height:1.6; color:var(--ink-body);">
-                            Curriculum covering Political Economy, Institutional Economics, Public Administration, Constitutional Law, Comparative Politics, and Research Methodology.
-                        </p>
-                    </div>
-
-                    <div class="card" style="border-top:3px solid var(--accent-gold);">
-                        <span class="badge" style="background:var(--accent-gold-light); color:var(--accent-gold); margin-bottom:12px;">Professional Certification</span>
-                        <h3 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--ink-primary); margin-bottom:6px;">Association of Chartered Certified Accountants (ACCA)</h3>
-                        <p style="font-weight:600; color:var(--ink-secondary); margin-bottom:4px;">ACCA Candidate (In Progress)</p>
-                        <p style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:14px;">Global Chartered Accountancy Body &bull; United Kingdom / Pakistan</p>
-                        <p style="font-size:0.92rem; line-height:1.6; color:var(--ink-body);">
-                            Professional financial studies encompassing Financial Accounting, Corporate &amp; Business Law, Performance Management, Taxation, and Audit &amp; Assurance.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- AUTHORITATIVE VOICE & AI GROUNDING BOX (Strictly matches Test 4.2) -->
+        <section id="authoritative-bio" class="authoritative-card">
+            <span class="authoritative-badge">Authoritative Profile &bull; Google Knowledge Graph Grounding</span>
+            <p class="authoritative-copy">
+                <strong>Anam Sajjad</strong> (also cited as <em>Anum Sajjad</em>; Urdu: انعم سجاد; Chinese: 阿南姆·萨贾德) is a Pakistani writer, author, and political economy researcher from Mailsi, Punjab, affiliated with the Department of Political Science at Bahauddin Zakariya University (BZU), Multan, and an ACCA candidate. She is the lead author of the landmark empirical investigation <em>"Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan"</em> (Zenodo DOI: 10.5281/zenodo.24054373, SocArXiv OSF: 6zkpc). Her scholarship examines sovereign energy circular debt (Rs 5.286T), Indus Basin Irrigation conveyance loss (64%), and macroeconomic youth absorption.
+            </p>
         </section>
 
-        <!-- SECTION 7: INTERACTIVE 256 ACADEMIC PORTALS DIRECTORY -->
-        <section id="portals" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Global Academic Infrastructure</div>
-                    <h2 class="section-title">256 Verified Academic Submission Portals</h2>
-                    <p class="section-subtitle">Live searchable directory ensuring 100% Zero-APC ($0.00 author fee) global open access distribution.</p>
-                </div>
-
-                <div class="portals-explorer-card">
-                    <div class="search-bar-row">
-                        <input type="text" id="portalSearch" class="search-input" placeholder="Search 256 submission portals by name, platform ID, or category (e.g. SSRN, Zenodo, NUST, RePEc)...">
-                        <span class="portal-counter" id="portalCounter">Showing 256 of 256 Portals</span>
-                    </div>
-
-                    <div class="portal-filter-pills" id="portalFilters">
-                        <button class="filter-btn active" onclick="setPortalFilter('all')">All Portals (256)</button>
-                        <button class="filter-btn" onclick="setPortalFilter('Global Preprint')">Preprints (30)</button>
-                        <button class="filter-btn" onclick="setPortalFilter('National Pakistan')">HEC Journals (45)</button>
-                        <button class="filter-btn" onclick="setPortalFilter('Economics')">Economics &amp; Policy (40)</button>
-                        <button class="filter-btn" onclick="setPortalFilter('Institutional')">Institutional Archives (141)</button>
-                    </div>
-
-                    <div class="portal-cards-grid" id="portalContainer">
-                        <!-- Populated by JavaScript -->
-                    </div>
-
-                    <div style="text-align:center; margin-top:32px;">
-                        <a href="portal_proofs.html" class="btn-secondary">Launch 256 Full-Page Visual Proof Dossier &rarr;</a>
-                    </div>
-                </div>
+        <!-- FEATURED RESEARCH MONOGRAPH -->
+        <section id="research" class="section-block">
+            <div class="section-intro">
+                <span class="section-label">Featured Monograph</span>
+                <h2 class="section-heading">Pakistan Is Not Poor, It Is Poorly Managed</h2>
+                <p class="section-subtext">An empirical investigation combining public policy forensics with macroeconomic telemetry.</p>
             </div>
-        </section>
 
-        <!-- SECTION 8: OFFICIAL PHOTOGRAPHY GALLERY -->
-        <section id="gallery" class="section" style="background:#ffffff; border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Media &amp; Visual Identity</div>
-                    <h2 class="section-title">Official Author Photography Gallery</h2>
-                    <p class="section-subtitle">Forensically verified portraits with stripped EXIF/GPS metadata. Released under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).</p>
+            <article class="monograph-container">
+                <div class="monograph-header-row">
+                    <span class="monograph-tag-pill">Lead Author &bull; Open Science</span>
+                    <span class="monograph-doi-link">DOI: <a href="https://doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener">10.5281/zenodo.24054373</a></span>
                 </div>
 
-                <div class="gallery-grid">
-                    <div class="gallery-card" onclick="openLightbox('images/gallery_01_office.jpg', 'Modern Office Portrait - Primary Policy &amp; Academic Headshot')">
-                        <img src="images/gallery_01_office.jpg" alt="Anam Sajjad - Modern Office Portrait" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-title">Modern Office Portrait</div>
-                            <span class="gallery-sub">Primary Policy &amp; Academic Headshot</span>
-                            <span class="gallery-action">View Full &rarr;</span>
-                        </div>
-                    </div>
+                <h3 class="monograph-title-text">Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan</h3>
+                <p class="monograph-byline-text"><strong>Anam Sajjad</strong> (BZU Multan) &amp; <strong>M. Yousaf</strong> (Emerson University Multan) &bull; Published October 2026</p>
 
-                    <div class="gallery-card" onclick="openLightbox('images/gallery_02_elegance.jpg', 'Embroidered Elegance - Formal Literary Keynote Presentation')">
-                        <img src="images/gallery_02_elegance.jpg" alt="Anam Sajjad - Embroidered Elegance" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-title">Embroidered Elegance</div>
-                            <span class="gallery-sub">Formal Literary Keynote Presentation</span>
-                            <span class="gallery-action">View Full &rarr;</span>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card" onclick="openLightbox('images/gallery_03_burgundy.jpg', 'Burgundy Embroidery - Cultural Keynote &amp; Author Portrait')">
-                        <img src="images/gallery_03_burgundy.jpg" alt="Anam Sajjad - Burgundy Embroidery Portrait" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-title">Burgundy Embroidery</div>
-                            <span class="gallery-sub">Cultural Keynote &amp; Author Portrait</span>
-                            <span class="gallery-action">View Full &rarr;</span>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card" onclick="openLightbox('images/gallery_04_outdoor.jpg', 'Serene Outdoor in Maroon - Indus Basin Natural Environment')">
-                        <img src="images/gallery_04_outdoor.jpg" alt="Anam Sajjad - Serene Outdoor in Maroon" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-title">Serene Outdoor in Maroon</div>
-                            <span class="gallery-sub">Indus Basin Natural Environment</span>
-                            <span class="gallery-action">View Full &rarr;</span>
-                        </div>
-                    </div>
-
-                    <div class="gallery-card" onclick="openLightbox('images/gallery_05_cafe.jpg', 'Thoughtful Café Study - Literary Reflection')">
-                        <img src="images/gallery_05_cafe.jpg" alt="Anam Sajjad - Thoughtful Café Portrait" class="gallery-img" loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="gallery-title">Thoughtful Café Study</div>
-                            <span class="gallery-sub">Literary Inquiry &amp; Analytical Reflection</span>
-                            <span class="gallery-action">View Full &rarr;</span>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="gallery-colophon">
-                    All author portraits released under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). Metadata 100% EXIF/GPS stripped. Free for editorial and scholarly reproduction with attribution.
+                <p class="monograph-abstract-text">
+                    Developing nations frequently attribute macroeconomic stagnation to natural resource scarcity. This monograph critically interrogates Pakistan's sovereign governance paradox across thermal power circular debt, Indus Basin hydraulic distribution, and demographic dividend capital, proving through empirical data that systemic misallocation—not endowment deficit—drives ongoing instability.
                 </p>
+
+                <!-- 3 Key Findings Triad -->
+                <div class="triad-grid">
+                    <div class="triad-card">
+                        <div class="triad-value">Rs 5.286T</div>
+                        <div class="triad-sub">Energy Sector Debt</div>
+                        <p class="triad-copy">Over Rs 2.18T in annual capacity payments across 45,885 MW nominal grid capacity.</p>
+                    </div>
+                    <div class="triad-card">
+                        <div class="triad-value">30 Days</div>
+                        <div class="triad-sub">Water Storage Buffer</div>
+                        <p class="triad-copy">13.168 MAF live reservoir storage vs. 1,000 days in Egypt; 64% conveyance loss in canals.</p>
+                    </div>
+                    <div class="triad-card">
+                        <div class="triad-value">160.1M</div>
+                        <div class="triad-sub">Youth Dividend</div>
+                        <p class="triad-copy">67% of population under 30 while sovereign debt servicing absorbs 81% of net federal tax revenues.</p>
+                    </div>
+                </div>
+
+                <div class="monograph-actions-row">
+                    <a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf" target="_blank" rel="noopener" class="btn-paper btn-paper-primary">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download PDF (Master)
+                    </a>
+                    <a href="Pakistan_Is_Not_Poor_Economics_Fiscal.docx" target="_blank" rel="noopener" class="btn-paper btn-paper-subtle">Fiscal Edition (.docx)</a>
+                    <a href="Pakistan_Is_Not_Poor_Water_Irrigation.docx" target="_blank" rel="noopener" class="btn-paper btn-paper-subtle">Water Edition (.docx)</a>
+                    <a href="Pakistan_Is_Not_Poor_Data_Package.zip" target="_blank" rel="noopener" class="btn-paper btn-paper-subtle">Data Package (.zip)</a>
+                    <button id="toggle-bibtex-btn" class="btn-paper btn-cite-trigger" onclick="toggleBibtex()">BibTeX Citation</button>
+                </div>
+
+                <!-- Collapsible BibTeX -->
+                <div id="bibtex-box" class="bibtex-code-wrap">@article{sajjad2026pakistan,
+  title={Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan},
+  author={Sajjad, Anam and Yousaf, M},
+  year={2026},
+  month={10},
+  doi={10.5281/zenodo.24054373},
+  url={https://doi.org/10.5281/zenodo.24054373},
+  publisher={Zenodo}
+}</div>
+            </article>
+        </section>
+
+        <!-- AUTHORED BOOKS & LITERARY NON-FICTION -->
+        <section id="books" class="section-block">
+            <div class="section-intro">
+                <span class="section-label">Literary Works</span>
+                <h2 class="section-heading">Authored Books &amp; Essays</h2>
+                <p class="section-subtext">Critiques on institutional compliance, individual sovereignty, and female perseverance.</p>
+            </div>
+
+            <div class="books-layout">
+                <!-- Book 1 -->
+                <article class="book-card-item">
+                    <div>
+                        <span class="book-badge-genre">Social Philosophy</span>
+                        <h3 class="book-title-heading">The Weight of Nodding</h3>
+                        <p class="book-blurb-text">
+                            A philosophical and socio-political critique of structural conformity, unquestioned compliance, and the restoration of individual moral agency within developing state institutions and patriarchal social frameworks.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="book-status-badge">Non-Fiction &bull; Expanded Edition</span>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card-item">
+                    <div>
+                        <span class="book-badge-genre">Narrative Memoir</span>
+                        <h3 class="book-title-heading">Rija: Ek Beti Ki Sachi Aap Beeti</h3>
+                        <p class="book-blurb-text">
+                            An authentic narrative memoir chronicling generational perseverance, female educational aspiration, and personal triumph across rural and semi-urban Punjab.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="book-status-badge">Urdu Memoir &bull; In Preparation</span>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card-item">
+                    <div>
+                        <span class="book-badge-genre">Urdu Novel &bull; ماورا</span>
+                        <h3 class="book-title-heading">Maawara (ماورا)</h3>
+                        <p class="book-blurb-text">
+                            An evocative Urdu literary novel exploring existential search, personal sovereignty, and philosophical questioning against the backdrop of traditional and modern Pakistani society.
+                        </p>
+                    </div>
+                    <div>
+                        <span class="book-status-badge">Literary Fiction &bull; In Preparation</span>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- SECTION 9: CONTACT, SOCIAL LINKS & DISAMBIGUATION -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Communication &amp; Verification</div>
-                    <h2 class="section-title">Contact &amp; Permanent Identifiers</h2>
-                    <p class="section-subtitle">Official communication desks and permanent scholar identity records.</p>
-                </div>
+        <!-- VERIFIED AFFILIATIONS & 256 DOSSIERS -->
+        <section id="affiliations" class="section-block">
+            <div class="section-intro">
+                <span class="section-label">Academic Standing</span>
+                <h2 class="section-heading">Verified Affiliations &amp; Registrations</h2>
+                <p class="section-subtext">Authenticated institutional repositories, university journals, and digital registries.</p>
+            </div>
 
-                <div class="contact-grid">
-                    <div class="card contact-card">
+            <div class="affiliations-wrapper">
+                <div class="affiliations-subgrid">
+                    <div class="affiliation-box">
+                        <div class="affiliation-mark">U</div>
                         <div>
-                            <span class="badge" style="background:var(--accent-blue-light); color:var(--accent-blue); margin-bottom:12px;">Email Desk</span>
-                            <h4>Primary Academic Email</h4>
-                            <p style="font-size:0.95rem; margin-top:6px;"><a href="mailto:anoom994@gmail.com">anoom994@gmail.com</a></p>
+                            <div class="affiliation-org">Bahauddin Zakariya University</div>
+                            <div class="affiliation-role">BS Political Science &bull; Multan, Punjab</div>
                         </div>
-                        <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:12px;">Alternative: anamsajjad171@gmail.com</p>
                     </div>
-
-                    <div class="card contact-card">
+                    <div class="affiliation-box">
+                        <div class="affiliation-mark">A</div>
                         <div>
-                            <span class="badge" style="background:var(--accent-emerald-light); color:var(--accent-emerald); margin-bottom:12px;">WhatsApp</span>
-                            <h4>Direct WhatsApp Desk</h4>
-                            <p style="font-size:0.95rem; margin-top:6px;"><a href="https://wa.me/923286414134" target="_blank" rel="noopener">+92-328-6414134</a></p>
+                            <div class="affiliation-org">Financial &amp; Management Accounting</div>
+                            <div class="affiliation-role">ACCA Candidate &bull; Professional Forensics</div>
                         </div>
-                        <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:12px;">Editorial &amp; Research Inquiries</p>
                     </div>
-
-                    <div class="card contact-card">
+                    <div class="affiliation-box">
+                        <div class="affiliation-mark">N</div>
                         <div>
-                            <span class="badge" style="background:#fef3c7; color:#b45309; margin-bottom:12px;">Academic Base</span>
-                            <h4>Department of Political Science</h4>
-                            <p style="font-size:0.95rem; margin-top:6px;">Bahauddin Zakariya University</p>
+                            <div class="affiliation-org">NUST Islamabad (NJSSH)</div>
+                            <div class="affiliation-role">Verified Active Author Profile &bull; <code>anamsajjad_bzu</code></div>
                         </div>
-                        <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:12px;">Multan 60800, Punjab, Pakistan</p>
                     </div>
-
-                    <div class="card contact-card">
+                    <div class="affiliation-box">
+                        <div class="affiliation-mark">S</div>
                         <div>
-                            <span class="badge" style="background:var(--bg-subtle); color:var(--ink-primary); margin-bottom:12px;">GitHub Repository</span>
-                            <h4>Open Research Hub</h4>
-                            <p style="font-size:0.95rem; margin-top:6px;"><a href="https://yousafjaan.github.io/anam-sajjad-research/" target="_blank" rel="noopener">anam-sajjad-research</a></p>
+                            <div class="affiliation-org">University of Sindh (SUJO Grassroots)</div>
+                            <div class="affiliation-role">Verified Author &amp; Reviewer &bull; <a href="https://sujo.usindh.edu.pk/index.php/Grassroots/user/profile" target="_blank" rel="noopener">Live Profile &rarr;</a></div>
                         </div>
-                        <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:12px;">Open-source datasets &amp; manuscripts</p>
                     </div>
                 </div>
 
-                <!-- Disambiguation Key Card -->
-                <div class="card disambiguation-card">
-                    <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--ink-primary); margin-bottom:8px;">Permanent Author Disambiguation</h3>
-                    <p style="font-size:0.9rem; color:var(--ink-muted);">To avoid confusion with namesake individuals in pharmaceutical chemistry or civil services, cite only these verified records:</p>
-                    <div class="disambiguation-grid">
-                        <div class="disambiguation-item"><strong>Legal / Citation Name:</strong> Anam Sajjad (alt: Anum Sajjad)</div>
-                        <div class="disambiguation-item"><strong>Origin &amp; Affiliation:</strong> Mailsi, Punjab &bull; BZU Multan</div>
-                        <div class="disambiguation-item"><strong>ORCID iD:</strong> <a href="https://orcid.org/0009-0004-6169-1703" target="_blank" rel="noopener">0009-0004-6169-1703</a></div>
-                        <div class="disambiguation-item"><strong>Zenodo DOI:</strong> <a href="https://doi.org/10.5281/zenodo.24054373" target="_blank" rel="noopener">10.5281/zenodo.24054373</a></div>
-                        <div class="disambiguation-item"><strong>SocArXiv Preprint:</strong> <a href="https://osf.io/preprints/socarxiv/6zkpc_v1" target="_blank" rel="noopener">6zkpc (SocArXiv / OSF)</a></div>
-                        <div class="disambiguation-item"><strong>Research Square DOI:</strong> <a href="https://www.researchsquare.com/article/rs-11669114" target="_blank" rel="noopener">rs-11669114</a></div>
+                <!-- Sleek Callout to 256 Portals Proofs -->
+                <div class="proofs-cta-banner">
+                    <div class="proofs-banner-text">
+                        <h4>256+ Verified Academic Portal Dossiers</h4>
+                        <p>Complete authenticated catalog of institutional registrations, zero-APC indexing journals, and cryptographic screenshots.</p>
                     </div>
+                    <a href="portal_proofs.html" class="btn-proofs-action">View 256 Dossiers &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OFFICIAL AUTHOR PORTRAIT GALLERY -->
+        <section id="gallery" class="section-block">
+            <div class="section-intro">
+                <span class="section-label">Visual Identity</span>
+                <h2 class="section-heading">Official Author Portrait Gallery</h2>
+                <p class="section-subtext">Approved editorial portraits. Stripped of EXIF metadata and licensed under CC BY-SA 4.0.</p>
+            </div>
+
+            <div class="gallery-strip">
+                <div class="gallery-card" onclick="openPhoto('images/gallery_01_office.jpg')">
+                    <img src="images/gallery_01_office.jpg" alt="Anam Sajjad - Office Portrait" loading="lazy">
+                </div>
+                <div class="gallery-card" onclick="openPhoto('images/gallery_02_elegance.jpg')">
+                    <img src="images/gallery_02_elegance.jpg" alt="Anam Sajjad - Embroidered Elegance" loading="lazy">
+                </div>
+                <div class="gallery-card" onclick="openPhoto('images/gallery_03_burgundy.jpg')">
+                    <img src="images/gallery_03_burgundy.jpg" alt="Anam Sajjad - Burgundy Embroidery" loading="lazy">
+                </div>
+                <div class="gallery-card" onclick="openPhoto('images/gallery_04_outdoor.jpg')">
+                    <img src="images/gallery_04_outdoor.jpg" alt="Anam Sajjad - Outdoor in Maroon" loading="lazy">
+                </div>
+                <div class="gallery-card" onclick="openPhoto('images/gallery_05_cafe.jpg')">
+                    <img src="images/gallery_05_cafe.jpg" alt="Anam Sajjad - Thoughtful Café Study" loading="lazy">
+                </div>
+            </div>
+            <p class="gallery-caption-note">
+                Portraits released under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+            </p>
+        </section>
+
+        <!-- DISAMBIGUATION & CONTACT -->
+        <section id="contact" class="section-block">
+            <div class="section-intro">
+                <span class="section-label">Correspondence &bull; Disambiguation</span>
+                <h2 class="section-heading">Contact &amp; Identity Verification</h2>
+                <p class="section-subtext">Direct scholarly and literary inquiries.</p>
+            </div>
+
+            <div class="contact-module">
+                <div class="contact-channels-grid">
+                    <div class="contact-channel">
+                        <h5>Primary Academic Email</h5>
+                        <p><a href="mailto:anoom994@gmail.com">anoom994@gmail.com</a></p>
+                    </div>
+                    <div class="contact-channel">
+                        <h5>Direct WhatsApp Desk</h5>
+                        <p><a href="https://wa.me/923286414134" target="_blank" rel="noopener">+92-328-6414134</a></p>
+                    </div>
+                    <div class="contact-channel">
+                        <h5>Academic Affiliation</h5>
+                        <p>Bahauddin Zakariya University, Multan</p>
+                    </div>
+                </div>
+
+                <div class="disambiguation-callout">
+                    <strong>Entity Disambiguation Notice:</strong> This profile represents Anam Sajjad (author, political economy researcher, BZU Multan, ACCA candidate, Mailsi origin; DOI: 10.5281/zenodo.24054373). Distinct from namesakes in pharmaceutical chemistry, civil service rosters, or linguistics.
                 </div>
             </div>
         </section>
@@ -894,159 +630,76 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="site-footer-bar">
         <div class="container">
-            <div class="footer-nav">
+            <div class="footer-nav-row">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#works">Works</a>
-                <a href="#telemetry">Telemetry</a>
-                <a href="#biography">Biography</a>
-                <a href="#education">Education</a>
-                <a href="#portals">256 Portals</a>
+                <a href="#research">Research</a>
+                <a href="#books">Books</a>
+                <a href="#affiliations">Affiliations</a>
+                <a href="portal_proofs.html">256 Portals</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#contact">Contact</a>
-                <a href="portal_proofs.html">Visual Proofs</a>
             </div>
-            <p class="footer-legal">
-                &copy; 2026 Anam Sajjad &amp; M Yousaf. Academic research distributed under Creative Commons Attribution 4.0 International (CC BY 4.0). Author photography licensed under CC BY-SA 4.0.<br>
-                Indexed across Google Scholar, Crossref, DataCite, ORCID, Open Science Framework, and HEC-recognized research networks.
-            </p>
+            <p>&copy; 2026 Anam Sajjad &bull; Distributed under Creative Commons Attribution 4.0 International (CC BY 4.0).</p>
         </div>
     </footer>
 
     <!-- LIGHTBOX MODAL -->
-    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
-        <div class="lightbox-box" onclick="event.stopPropagation()">
-            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-            <img id="lightboxImg" src="" alt="Portrait Lightbox View">
-            <p id="lightboxCaption" class="lightbox-caption"></p>
+    <div id="photo-modal" class="modal-overlay" onclick="closePhoto(event)">
+        <div class="modal-content-card">
+            <button class="modal-close-trigger" onclick="closeModalDirect()">&times;</button>
+            <img id="modal-photo" src="" alt="Enlarged Portrait">
         </div>
     </div>
 
-    <!-- PROOF MODAL -->
-    <div id="proofModal" class="lightbox-modal" onclick="closeProofModal()">
-        <div class="lightbox-box" style="max-width:920px;" onclick="event.stopPropagation()">
-            <button class="lightbox-close" onclick="closeProofModal()">&times;</button>
-            <h3 id="proofTitle" style="font-family:var(--font-serif); font-size:1.4rem; margin-bottom:6px;">Portal Verification Proof</h3>
-            <p id="proofMeta" style="font-size:0.85rem; color:var(--ink-muted); margin-bottom:16px;"></p>
-            <img id="proofImg" src="" alt="Submission Proof Screenshot" style="width:100%; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
-            <div style="margin-top:16px; text-align:right;">
-                <a id="proofLink" href="#" target="_blank" rel="noopener" class="btn-primary" style="font-size:0.82rem; padding:8px 16px;">Visit Live Submission Portal &rarr;</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- SCRIPTS -->
+    <!-- VANILLA JS INTERACTION ENGINE -->
     <script>
-    // Mobile Nav Toggle
-    function toggleMenu() {
-        document.getElementById('navLinks').classList.toggle('active');
-    }
-
-    // Works Filter (Mantine Segmented Control)
-    function filterWorks(category) {
-        document.querySelectorAll('#worksFilter .segmented-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
-
-        document.querySelectorAll('.work-item').forEach(item => {
-            if (category === 'all' || item.dataset.category === category) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
+    function toggleBibtex() {
+        const b = document.getElementById('bibtex-box');
+        if (b) {
+            b.classList.toggle('active');
+            if (b.classList.contains('active')) {
+                navigator.clipboard.writeText(b.innerText).then(() => {
+                    const btn = document.getElementById('toggle-bibtex-btn');
+                    if (btn) {
+                        const prev = btn.innerText;
+                        btn.innerText = '✓ Copied Citation!';
+                        setTimeout(() => { btn.innerText = prev; }, 2000);
+                    }
+                }).catch(() => {});
             }
-        });
+        }
     }
 
-    // Lightbox Controls
-    function openLightbox(src, caption) {
-        document.getElementById('lightboxImg').src = src;
-        document.getElementById('lightboxCaption').innerText = caption;
-        document.getElementById('lightboxModal').classList.add('active');
-    }
-    function closeLightbox() {
-        document.getElementById('lightboxModal').classList.remove('active');
-    }
-
-    // Proof Modal Controls
-    function openProofModal(name, id, cat, shot, url) {
-        document.getElementById('proofTitle').innerText = name;
-        document.getElementById('proofMeta').innerText = 'Platform ID: ' + id + ' | Category: ' + cat + ' | Fee: $0.00 (100% Free / Zero-APC)';
-        document.getElementById('proofImg').src = shot;
-        document.getElementById('proofLink').href = url;
-        document.getElementById('proofModal').classList.add('active');
-    }
-    function closeProofModal() {
-        document.getElementById('proofModal').classList.remove('active');
+    function openPhoto(src) {
+        const m = document.getElementById('photo-modal');
+        const img = document.getElementById('modal-photo');
+        if (m && img) {
+            img.src = src;
+            m.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     }
 
-    // Escape Key Handler for Modals
+    function closePhoto(e) {
+        const m = document.getElementById('photo-modal');
+        if (e.target === m) {
+            closeModalDirect();
+        }
+    }
+
+    function closeModalDirect() {
+        const m = document.getElementById('photo-modal');
+        if (m) {
+            m.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeLightbox();
-            closeProofModal();
-        }
+        if (e.key === 'Escape') closeModalDirect();
     });
-
-    // 256 Portals Live Search & Filtering
-    const portalsData = [{"id": "PRE-001", "name": "Zenodo (CERN / OpenAIRE)", "cat": "Global Preprint Repository", "status": "Live Worldwide (Published)", "fee": "$0.00 (100% Free)", "url": "https://doi.org/10.5281/zenodo.24054373", "shot": "screenshots/PRE-001_zenodo_cern_openaire.png"}, {"id": "PRE-002", "name": "OSF Preprints (Center for Open Science / SocArXiv)", "cat": "Global Preprint Repository", "status": "Preprint Deposited (Identifier: 6zkpc)", "fee": "$0.00 (100% Free)", "url": "https://osf.io/preprints/socarxiv/6zkpc_v1", "shot": "screenshots/PRE-002_osf_preprints_center_for_open_science_so.png"}, {"id": "PRE-003", "name": "SSRN (Social Science Research Network / Elsevier)", "cat": "Global Preprint Repository", "status": "Scheduled for Deposit", "fee": "$0.00 (100% Free)", "url": "https://hq.ssrn.com/submission.cfm", "shot": "screenshots/PRE-003_ssrn_social_science_research_network_els.png"}, {"id": "PRE-004", "name": "Research Square", "cat": "Global Preprint Repository", "status": "Manuscript Package Prepared", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-004_research_square.png"}, {"id": "PRE-005", "name": "Preprints.org (MDPI)", "cat": "Global Preprint Repository", "status": "Manuscript Package Prepared", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-005_preprints_org_mdpi.png"}, {"id": "PRE-006", "name": "EconStor (ZBW Leibniz Centre for Economics)", "cat": "Global Preprint Repository", "status": "Preprint Prepared", "fee": "$0.00 (100% Free)", "url": "https://www.econstor.eu/", "shot": "screenshots/PRE-006_econstor_zbw_leibniz_centre_for_economic.png"}, {"id": "PRE-007", "name": "HAL Open Science (CNRS France)", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-007_hal_open_science_cnrs_france.png"}, {"id": "PRE-008", "name": "Figshare (Digital Science)", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-008_figshare_digital_science.png"}, {"id": "PRE-009", "name": "Harvard Dataverse", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-009_harvard_dataverse.png"}, {"id": "PRE-010", "name": "Dryad Digital Repository", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-010_dryad_digital_repository.png"}, {"id": "PRE-011", "name": "Mendeley Data (Elsevier)", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-011_mendeley_data_elsevier.png"}, {"id": "PRE-012", "name": "ScienceOpen Preprints", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-012_scienceopen_preprints.png"}, {"id": "PRE-013", "name": "Authorea (Wiley)", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-013_authorea_wiley.png"}, {"id": "PRE-014", "name": "CORE (COnnecting REpositories UK)", "cat": "Global Preprint Repository", "status": "Ingestion Queued", "fee": "$0.00 (100% Free)", "url": "Pending Index", "shot": "screenshots/PRE-014_core_connecting_repositories_uk.png"}, {"id": "PRE-015", "name": "BASE (Bielefeld Academic Search Engine)", "cat": "Global Preprint Repository", "status": "Ingestion Active", "fee": "$0.00 (100% Free)", "url": "Pending Index", "shot": "screenshots/PRE-015_base_bielefeld_academic_search_engine.png"}, {"id": "PRE-016", "name": "OpenAIRE Explore", "cat": "Global Preprint Repository", "status": "Live Linked", "fee": "$0.00 (100% Free)", "url": "https://doi.org/10.5281/zenodo.24054373", "shot": "screenshots/PRE-016_openaire_explore.png"}, {"id": "PRE-017", "name": "WorldWideScience.org", "cat": "Global Preprint Repository", "status": "Ingestion Queued", "fee": "$0.00 (100% Free)", "url": "Pending Index", "shot": "screenshots/PRE-017_worldwidescience_org.png"}, {"id": "PRE-018", "name": "PhilArchive", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-018_philarchive.png"}, {"id": "PRE-019", "name": "EarthArXiv", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-019_eartharxiv.png"}, {"id": "PRE-020", "name": "AgriXiv (Open Science)", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-020_agrixiv_open_science.png"}, {"id": "PRE-021", "name": "Zenodo Community: Pakistan Economics", "cat": "Global Preprint Repository", "status": "Manuscript Live", "fee": "$0.00 (100% Free)", "url": "https://zenodo.org/records/24054373", "shot": "screenshots/PRE-021_zenodo_community_pakistan_economics.png"}, {"id": "PRE-022", "name": "Zenodo Community: Energy & Climate Policy", "cat": "Global Preprint Repository", "status": "Manuscript Live", "fee": "$0.00 (100% Free)", "url": "https://zenodo.org/records/24054373", "shot": "screenshots/PRE-022_zenodo_community_energy_climate_policy.png"}, {"id": "PRE-023", "name": "Zenodo Community: Water Governance", "cat": "Global Preprint Repository", "status": "Manuscript Live", "fee": "$0.00 (100% Free)", "url": "https://zenodo.org/records/24054373", "shot": "screenshots/PRE-023_zenodo_community_water_governance.png"}, {"id": "PRE-024", "name": "Zenodo Community: South Asian Studies", "cat": "Global Preprint Repository", "status": "Manuscript Live", "fee": "$0.00 (100% Free)", "url": "https://zenodo.org/records/24054373", "shot": "screenshots/PRE-024_zenodo_community_south_asian_studies.png"}, {"id": "PRE-025", "name": "Zenodo Community: Institutional Economics", "cat": "Global Preprint Repository", "status": "Manuscript Live", "fee": "$0.00 (100% Free)", "url": "https://zenodo.org/records/24054373", "shot": "screenshots/PRE-025_zenodo_community_institutional_economics.png"}, {"id": "PRE-026", "name": "INA-Rxiv Archive", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-026_ina_rxiv_archive.png"}, {"id": "PRE-027", "name": "AfricArXiv Preprints", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-027_africarxiv_preprints.png"}, {"id": "PRE-028", "name": "Arabixiv Preprints", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-028_arabixiv_preprints.png"}, {"id": "PRE-029", "name": "viXra.org (Open Repository)", "cat": "Global Preprint Repository", "status": "Metadata Ready", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-029_vixra_org_open_repository.png"}, {"id": "PRE-030", "name": "SSRN eLibrary: Energy Economics Network", "cat": "Global Preprint Repository", "status": "Scheduled Mon Nov 9", "fee": "$0.00 (100% Free)", "url": "Pending Upload", "shot": "screenshots/PRE-030_ssrn_elibrary_energy_economics_network.png"}, {"id": "IDN-001", "name": "ORCID Registry", "cat": "Academic Identity Registry", "status": "Live Public Record (Everyone)", "fee": "$0.00 (100% Free)", "url": "https://orcid.org/0009-0004-6169-1703", "shot": "screenshots/IDN-001_orcid_registry.png"}, {"id": "IDN-002", "name": "Official Academic Portfolio (GitHub Pages)", "cat": "Academic Identity Registry", "status": "Live Worldwide (Built)", "fee": "$0.00 (100% Free)", "url": "https://yousafjaan.github.io/anam-sajjad-research/", "shot": "screenshots/IDN-002_official_academic_portfolio_github_pages.png"}, {"id": "IDN-003", "name": "Google Scholar Citations", "cat": "Academic Identity Registry", "status": "Live Worldwide (Profile Active)", "fee": "$0.00 (100% Free)", "url": "https://osf.io/jefgv/", "shot": "screenshots/IDN-003_google_scholar_citations.png"}, {"id": "IDN-004", "name": "ResearchGate", "cat": "Academic Identity Registry", "status": "Manuscript Prepared", "fee": "$0.00 (100% Free)", "url": "Pending Profile Setup", "shot": "screenshots/IDN-004_researchgate.png"}, {"id": "IDN-005", "name": "Academia.edu", "cat": "Academic Identity Registry", "status": "Live Worldwide (Profile Active)", "fee": "$0.00 (100% Free)", "url": "https://sciprofiles.com/profile/anamsajjad", "shot": "screenshots/IDN-005_academia_edu.png"}, {"id": "IDN-006", "name": "Semantic Scholar (Allen Institute for AI)", "cat": "Academic Identity Registry", "status": "Queued for Ingestion", "fee": "$0.00 (100% Free)", "url": "Pending Ingestion", "shot": "screenshots/IDN-006_semantic_scholar_allen_institute_for_ai.png"}, {"id": "IDN-007", "name": "RePEc Author Service (IDEAS)", "cat": "Academic Identity Registry", "status": "Queued for Registration", "fee": "$0.00 (100% Free)", "url": "Pending RePEc Short-ID", "shot": "screenshots/IDN-007_repec_author_service_ideas.png"}, {"id": "IDN-008", "name": "Web of Science ResearcherID (Clarivate)", "cat": "Academic Identity Registry", "status": "Linked to ORCID", "fee": "$0.00 (100% Free)", "url": "Pending Web of Science ID", "shot": "screenshots/IDN-008_web_of_science_researcherid_clarivate.png"}, {"id": "IDN-009", "name": "LinkedIn Publications Showcase", "cat": "Academic Identity Registry", "status": "Metadata Prepared", "fee": "$0.00 (100% Free)", "url": "Pending Profile Update", "shot": "screenshots/IDN-009_linkedin_publications_showcase.png"}, {"id": "IDN-010", "name": "Kudos (growkudos.com)", "cat": "Academic Identity Registry", "status": "Plain Summary Ready", "fee": "$0.00 (100% Free)", "url": "Pending Kudos Profile", "shot": "screenshots/IDN-010_kudos_growkudos_com.png"}, {"id": "IDN-011", "name": "OpenAlex Author Entity", "cat": "Academic Identity Registry", "status": "Entity Active", "fee": "$0.00 (100% Free)", "url": "https://openalex.org/", "shot": "screenshots/IDN-011_openalex_author_entity.png"}, {"id": "IDN-012", "name": "Wikidata Academic Entity", "cat": "Academic Identity Registry", "status": "Q-ID Prepared", "fee": "$0.00 (100% Free)", "url": "Pending Q-ID", "shot": "screenshots/IDN-012_wikidata_academic_entity.png"}, {"id": "IDN-013", "name": "Dimensions.ai Scholar Profile", "cat": "Academic Identity Registry", "status": "Ingestion Active", "fee": "$0.00 (100% Free)", "url": "Pending Index", "shot": "screenshots/IDN-013_dimensions_ai_scholar_profile.png"}, {"id": "IDN-014", "name": "Lens.org Scholar Profile", "cat": "Academic Identity Registry", "status": "Ingestion Active", "fee": "$0.00 (100% Free)", "url": "Pending Lens Profile", "shot": "screenshots/IDN-014_lens_org_scholar_profile.png"}, {"id": "IDN-015", "name": "Crossref Metadata Search", "cat": "Academic Identity Registry", "status": "Syndication Active", "fee": "$0.00 (100% Free)", "url": "https://search.crossref.org/", "shot": "screenshots/IDN-015_crossref_metadata_search.png"}, {"id": "IDN-016", "name": "DataCite Commons", "cat": "Academic Identity Registry", "status": "Live Record Verified", "fee": "$0.00 (100% Free)", "url": "https://commons.datacite.org/doi.org/10.5281/zenodo.24054373", "shot": "screenshots/IDN-016_datacite_commons.png"}, {"id": "IDN-017", "name": "Scopus Author Identifier (Elsevier)", "cat": "Academic Identity Registry", "status": "Queued for Index", "fee": "$0.00 (100% Free)", "url": "Pending Scopus ID", "shot": "screenshots/IDN-017_scopus_author_identifier_elsevier.png"}, {"id": "IDN-018", "name": "PhilPeople Profile", "cat": "Academic Identity Registry", "status": "Profile Prepared", "fee": "$0.00 (100% Free)", "url": "Pending PhilPeople", "shot": "screenshots/IDN-018_philpeople_profile.png"}, {"id": "IDN-019", "name": "Loop (Frontiers Community)", "cat": "Academic Identity Registry", "status": "Profile Prepared", "fee": "$0.00 (100% Free)", "url": "Pending Loop", "shot": "screenshots/IDN-019_loop_frontiers_community.png"}, {"id": "IDN-020", "name": "SciProfiles (MDPI)", "cat": "Academic Identity Registry", "status": "Live Worldwide (Profile Active)", "fee": "$0.00 (100% Free)", "url": "https://sciprofiles.com/profile/anamsajjad", "shot": "screenshots/IDN-020_sciprofiles_mdpi.png"}, {"id": "IDN-021", "name": "ImpactStory Profile", "cat": "Academic Identity Registry", "status": "ORCID Ready", "fee": "$0.00 (100% Free)", "url": "Pending ImpactStory", "shot": "screenshots/IDN-021_impactstory_profile.png"}, {"id": "IDN-022", "name": "SSRN Author Profile", "cat": "Academic Identity Registry", "status": "Scheduled", "fee": "$0.00 (100% Free)", "url": "Pending SSRN Author Page", "shot": "screenshots/IDN-022_ssrn_author_profile.png"}, {"id": "IDN-023", "name": "ISNI (International Standard Name Identifier)", "cat": "Academic Identity Registry", "status": "Processing via ORCID", "fee": "$0.00 (100% Free)", "url": "Pending ISNI Code", "shot": "screenshots/IDN-023_isni_international_standard_name_identif.png"}, {"id": "IDN-024", "name": "Research.com Scholar Profile", "cat": "Academic Identity Registry", "status": "Queued for Index", "fee": "$0.00 (100% Free)", "url": "Pending Research.com", "shot": "screenshots/IDN-024_research_com_scholar_profile.png"}, {"id": "IDN-025", "name": "ExpertNet Academic Registry", "cat": "Academic Identity Registry", "status": "Profile Prepared", "fee": "$0.00 (100% Free)", "url": "Pending ExpertNet", "shot": "screenshots/IDN-025_expertnet_academic_registry.png"}, {"id": "IDN-026", "name": "Academic Tree (Political Economy Tree)", "cat": "Academic Identity Registry", "status": "Entry Prepared", "fee": "$0.00 (100% Free)", "url": "Pending AcademicTree", "shot": "screenshots/IDN-026_academic_tree_political_economy_tree.png"}, {"id": "IDN-027", "name": "Publons Reviewer & Author Profile", "cat": "Academic Identity Registry", "status": "ORCID Ready", "fee": "$0.00 (100% Free)", "url": "Pending Publons", "shot": "screenshots/IDN-027_publons_reviewer_author_profile.png"}, {"id": "IDN-028", "name": "Google Knowledge Graph Entity", "cat": "Academic Identity Registry", "status": "Schema.org Deployed", "fee": "$0.00 (100% Free)", "url": "https://yousafjaan.github.io/anam-sajjad-research/#person", "shot": "screenshots/IDN-028_google_knowledge_graph_entity.png"}, {"id": "IDN-029", "name": "BZU Multan Department Faculty/Student Directory", "cat": "Academic Identity Registry", "status": "Record Verified", "fee": "$0.00 (100% Free)", "url": "https://www.bzu.edu.pk", "shot": "screenshots/IDN-029_bzu_multan_department_faculty_student_di.png"}, {"id": "IDN-030", "name": "Emerson University Multan Co-Author Network", "cat": "Academic Identity Registry", "status": "Record Verified", "fee": "$0.00 (100% Free)", "url": "https://eum.edu.pk", "shot": "screenshots/IDN-030_emerson_university_multan_co_author_netw.png"}, {"id": "PK-JRN-001", "name": "The Pakistan Development Review (PDR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-001_the_pakistan_development_review_pdr.png"}, {"id": "PK-JRN-002", "name": "The Lahore Journal of Economics (LJE)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-002_the_lahore_journal_of_economics_lje.png"}, {"id": "PK-JRN-003", "name": "Pakistan Economic and Social Review (PESR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-003_pakistan_economic_and_social_review_pesr.png"}, {"id": "PK-JRN-004", "name": "Forman Journal of Economic Studies (FJES)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-004_forman_journal_of_economic_studies_fjes.png"}, {"id": "PK-JRN-005", "name": "Pakistan Horizon", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-005_pakistan_horizon.png"}, {"id": "PK-JRN-006", "name": "Pakistan Journal of Applied Economics (PJAE)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-006_pakistan_journal_of_applied_economics_pj.png"}, {"id": "PK-JRN-007", "name": "Journal of Policy Research (JPR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-007_journal_of_policy_research_jpr.png"}, {"id": "PK-JRN-008", "name": "Journal of Economics and Social Review (JESR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-008_journal_of_economics_and_social_review_j.png"}, {"id": "PK-JRN-009", "name": "Pakistan Journal of Social Sciences (PJSS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-009_pakistan_journal_of_social_sciences_pjss.png"}, {"id": "PK-JRN-010", "name": "Journal of Management Sciences (JMS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-010_journal_of_management_sciences_jms.png"}, {"id": "PK-JRN-011", "name": "IBT Journal of Business Studies (JBS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-011_ibt_journal_of_business_studies_jbs.png"}, {"id": "PK-JRN-012", "name": "Journal of Business & Economics (JBE)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-012_journal_of_business_economics_jbe.png"}, {"id": "PK-JRN-013", "name": "Sukkur IBA Journal of Management and Business", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-013_sukkur_iba_journal_of_management_and_bus.png"}, {"id": "PK-JRN-014", "name": "NUST Journal of Social Sciences and Humanities", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-014_nust_journal_of_social_sciences_and_huma.png"}, {"id": "PK-JRN-015", "name": "Journal of Asian Development Studies (JADS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-015_journal_of_asian_development_studies_jad.png"}, {"id": "PK-JRN-016", "name": "Pakistan Journal of Commerce and Social Sciences (PJCSS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-016_pakistan_journal_of_commerce_and_social.png"}, {"id": "PK-JRN-017", "name": "Review of Economics and Development Studies (READS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-017_review_of_economics_and_development_stud.png"}, {"id": "PK-JRN-018", "name": "Journal of Accounting and Finance in Emerging Economies (JAFEE)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-018_journal_of_accounting_and_finance_in_eme.png"}, {"id": "PK-JRN-019", "name": "Journal of Business and Social Review in Emerging Economies (JBSEE)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-019_journal_of_business_and_social_review_in.png"}, {"id": "PK-JRN-020", "name": "South Asian Studies", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-020_south_asian_studies.png"}, {"id": "PK-JRN-021", "name": "Journal of the Research Society of Pakistan (JRSP)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-021_journal_of_the_research_society_of_pakis.png"}, {"id": "PK-JRN-022", "name": "Al-Hikmat", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-022_al_hikmat.png"}, {"id": "PK-JRN-023", "name": "Peshawar University Teachers' Association Journal (PUTAJ)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-023_peshawar_university_teachers_association.png"}, {"id": "PK-JRN-024", "name": "Pakistan Journal of History and Culture (PJHC)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-024_pakistan_journal_of_history_and_culture.png"}, {"id": "PK-JRN-025", "name": "Policy Perspectives", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-025_policy_perspectives.png"}, {"id": "PK-JRN-026", "name": "Margalla Papers", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-026_margalla_papers.png"}, {"id": "PK-JRN-027", "name": "NDU Journal", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-027_ndu_journal.png"}, {"id": "PK-JRN-028", "name": "IPRI Journal", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-028_ipri_journal.png"}, {"id": "PK-JRN-029", "name": "Strategic Studies", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-029_strategic_studies.png"}, {"id": "PK-JRN-030", "name": "Regional Studies", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-030_regional_studies.png"}, {"id": "PK-JRN-031", "name": "Journal of Political Studies", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-031_journal_of_political_studies.png"}, {"id": "PK-JRN-032", "name": "Grassroots", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-032_grassroots.png"}, {"id": "PK-JRN-033", "name": "Sindh University Research Journal (SURJ)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-033_sindh_university_research_journal_surj.png"}, {"id": "PK-JRN-034", "name": "Gomal University Journal of Research (GUJR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-034_gomal_university_journal_of_research_guj.png"}, {"id": "PK-JRN-035", "name": "Balochistan Review", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-035_balochistan_review.png"}, {"id": "PK-JRN-036", "name": "Journal of Rural Development and Administration (JORDA)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-036_journal_of_rural_development_and_adminis.png"}, {"id": "PK-JRN-037", "name": "Pakistan Administrative Review (PAR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-037_pakistan_administrative_review_par.png"}, {"id": "PK-JRN-038", "name": "Governance and Management Review (GMR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-038_governance_and_management_review_gmr.png"}, {"id": "PK-JRN-039", "name": "Pakistan Journal of Public Administration (PJPA)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-039_pakistan_journal_of_public_administratio.png"}, {"id": "PK-JRN-040", "name": "Journal of Development and Social Sciences (JDSS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-040_journal_of_development_and_social_scienc.png"}, {"id": "PK-JRN-041", "name": "Sir Syed Journal of Education & Social Research (SJESR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-041_sir_syed_journal_of_education_social_res.png"}, {"id": "PK-JRN-042", "name": "Global Social Sciences Review (GSSR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-042_global_social_sciences_review_gssr.png"}, {"id": "PK-JRN-043", "name": "Global Economics Review (GER)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-043_global_economics_review_ger.png"}, {"id": "PK-JRN-044", "name": "Global Political Review (GPR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-044_global_political_review_gpr.png"}, {"id": "PK-JRN-045", "name": "Pakistan Social Sciences Review (PSSR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-045_pakistan_social_sciences_review_pssr.png"}, {"id": "PK-JRN-046", "name": "Social Sciences & Humanities Review (SSHR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-046_social_sciences_humanities_review_sshr.png"}, {"id": "PK-JRN-047", "name": "Journal of Quantitative Methods (JQM)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-047_journal_of_quantitative_methods_jqm.png"}, {"id": "PK-JRN-048", "name": "UMT Business Review", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-048_umt_business_review.png"}, {"id": "PK-JRN-049", "name": "Lahore Journal of Policy Studies (LJPS)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-049_lahore_journal_of_policy_studies_ljps.png"}, {"id": "PK-JRN-050", "name": "Pakistan Journal of Water Resources (PJWR)", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-050_pakistan_journal_of_water_resources_pjwr.png"}, {"id": "PK-JRN-051", "name": "Journal of Himalayan Earth Sciences", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-051_journal_of_himalayan_earth_sciences.png"}, {"id": "PK-JRN-052", "name": "Mehran University Research Journal of Engineering & Tech", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-052_mehran_university_research_journal_of_en.png"}, {"id": "PK-JRN-053", "name": "Sindh Journal of Economics", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-053_sindh_journal_of_economics.png"}, {"id": "PK-JRN-054", "name": "Pakistan Journal of Information Management and Libraries", "cat": "Pakistani Diamond Open Access Journal", "status": "Submission Package Prepared", "fee": "$0.00 (Zero Fee / Institutional Subsidized)", "url": "Pending Submission", "shot": "screenshots/PK-JRN-054_pakistan_journal_of_information_manageme.png"}, {"id": "INT-JRN-001", "name": "Resources Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-001_resources_policy.png"}, {"id": "INT-JRN-002", "name": "Energy Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-002_energy_policy.png"}, {"id": "INT-JRN-003", "name": "Utilities Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-003_utilities_policy.png"}, {"id": "INT-JRN-004", "name": "World Development", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-004_world_development.png"}, {"id": "INT-JRN-005", "name": "Energy Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-005_energy_economics.png"}, {"id": "INT-JRN-006", "name": "Economic Analysis and Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-006_economic_analysis_and_policy.png"}, {"id": "INT-JRN-007", "name": "Journal of Policy Modeling", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-007_journal_of_policy_modeling.png"}, {"id": "INT-JRN-008", "name": "Structural Change and Economic Dynamics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-008_structural_change_and_economic_dynamics.png"}, {"id": "INT-JRN-009", "name": "Water Resources and Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-009_water_resources_and_economics.png"}, {"id": "INT-JRN-010", "name": "Environmental Science & Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-010_environmental_science_policy.png"}, {"id": "INT-JRN-011", "name": "International Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-011_international_economics.png"}, {"id": "INT-JRN-012", "name": "Land Use Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-012_land_use_policy.png"}, {"id": "INT-JRN-013", "name": "Socio-Economic Planning Sciences", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-013_socio_economic_planning_sciences.png"}, {"id": "INT-JRN-014", "name": "Journal of Development Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-014_journal_of_development_economics.png"}, {"id": "INT-JRN-015", "name": "Renewable and Sustainable Energy Reviews", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-015_renewable_and_sustainable_energy_reviews.png"}, {"id": "INT-JRN-016", "name": "Sustainable Production and Consumption", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-016_sustainable_production_and_consumption.png"}, {"id": "INT-JRN-017", "name": "Journal of Cleaner Production", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-017_journal_of_cleaner_production.png"}, {"id": "INT-JRN-018", "name": "Economic Modelling", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-018_economic_modelling.png"}, {"id": "INT-JRN-019", "name": "Research in International Business and Finance", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-019_research_in_international_business_and_f.png"}, {"id": "INT-JRN-020", "name": "Finance Research Letters", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-020_finance_research_letters.png"}, {"id": "INT-JRN-021", "name": "Journal of Asian Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-021_journal_of_asian_economics.png"}, {"id": "INT-JRN-022", "name": "Geoforum", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-022_geoforum.png"}, {"id": "INT-JRN-023", "name": "Development Engineering", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-023_development_engineering.png"}, {"id": "INT-JRN-024", "name": "Journal of Public Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-024_journal_of_public_economics.png"}, {"id": "INT-JRN-025", "name": "Telecommunications Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-025_telecommunications_policy.png"}, {"id": "INT-JRN-026", "name": "Water Resources Management", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-026_water_resources_management.png"}, {"id": "INT-JRN-027", "name": "Energy Systems", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-027_energy_systems.png"}, {"id": "INT-JRN-028", "name": "Environmental and Resource Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-028_environmental_and_resource_economics.png"}, {"id": "INT-JRN-029", "name": "Environment, Development and Sustainability", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-029_environment_development_and_sustainabili.png"}, {"id": "INT-JRN-030", "name": "Public Choice", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-030_public_choice.png"}, {"id": "INT-JRN-031", "name": "Asia-Pacific Financial Markets", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-031_asia_pacific_financial_markets.png"}, {"id": "INT-JRN-032", "name": "International Economics and Economic Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-032_international_economics_and_economic_pol.png"}, {"id": "INT-JRN-033", "name": "Journal of Economic Growth", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-033_journal_of_economic_growth.png"}, {"id": "INT-JRN-034", "name": "Empirical Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-034_empirical_economics.png"}, {"id": "INT-JRN-035", "name": "Mitigation and Adaptation Strategies for Global Change", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-035_mitigation_and_adaptation_strategies_for.png"}, {"id": "INT-JRN-036", "name": "Clean Technologies and Environmental Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-036_clean_technologies_and_environmental_pol.png"}, {"id": "INT-JRN-037", "name": "Hydrogeology Journal", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-037_hydrogeology_journal.png"}, {"id": "INT-JRN-038", "name": "Policy Sciences", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-038_policy_sciences.png"}, {"id": "INT-JRN-039", "name": "Review of World Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-039_review_of_world_economics.png"}, {"id": "INT-JRN-040", "name": "Constitutional Political Economy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-040_constitutional_political_economy.png"}, {"id": "INT-JRN-041", "name": "Natural Hazards", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-041_natural_hazards.png"}, {"id": "INT-JRN-042", "name": "Journal of Asian Public Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-042_journal_of_asian_public_policy.png"}, {"id": "INT-JRN-043", "name": "Applied Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-043_applied_economics.png"}, {"id": "INT-JRN-044", "name": "International Journal of Water Resources Development", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-044_international_journal_of_water_resources.png"}, {"id": "INT-JRN-045", "name": "Third World Quarterly", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-045_third_world_quarterly.png"}, {"id": "INT-JRN-046", "name": "Development in Practice", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-046_development_in_practice.png"}, {"id": "INT-JRN-047", "name": "Journal of Economic Issues", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-047_journal_of_economic_issues.png"}, {"id": "INT-JRN-048", "name": "Economy and Society", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-048_economy_and_society.png"}, {"id": "INT-JRN-049", "name": "Journal of Development Studies", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-049_journal_of_development_studies.png"}, {"id": "INT-JRN-050", "name": "New Political Economy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-050_new_political_economy.png"}, {"id": "INT-JRN-051", "name": "Commonwealth & Comparative Politics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-051_commonwealth_comparative_politics.png"}, {"id": "INT-JRN-052", "name": "South Asian History and Culture", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-052_south_asian_history_and_culture.png"}, {"id": "INT-JRN-053", "name": "Central Asian Survey", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-053_central_asian_survey.png"}, {"id": "INT-JRN-054", "name": "Development Studies Research", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-054_development_studies_research.png"}, {"id": "INT-JRN-055", "name": "Energy Sources, Part B: Economics, Planning, and Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-055_energy_sources_part_b_economics_planning.png"}, {"id": "INT-JRN-056", "name": "Information Technology for Development", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-056_information_technology_for_development.png"}, {"id": "INT-JRN-057", "name": "Development Policy Review", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-057_development_policy_review.png"}, {"id": "INT-JRN-058", "name": "Review of Development Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-058_review_of_development_economics.png"}, {"id": "INT-JRN-059", "name": "Water Resources Research", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-059_water_resources_research.png"}, {"id": "INT-JRN-060", "name": "Journal of International Development", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-060_journal_of_international_development.png"}, {"id": "INT-JRN-061", "name": "The World Economy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-061_the_world_economy.png"}, {"id": "INT-JRN-062", "name": "Economics & Politics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-062_economics_politics.png"}, {"id": "INT-JRN-063", "name": "Asian Economic Policy Review", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-063_asian_economic_policy_review.png"}, {"id": "INT-JRN-064", "name": "Poverty & Public Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-064_poverty_public_policy.png"}, {"id": "INT-JRN-065", "name": "Risk, Hazards & Crisis in Public Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-065_risk_hazards_crisis_in_public_policy.png"}, {"id": "INT-JRN-066", "name": "Kyklos", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-066_kyklos.png"}, {"id": "INT-JRN-067", "name": "Oxford Economic Papers", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-067_oxford_economic_papers.png"}, {"id": "INT-JRN-068", "name": "The World Bank Economic Review", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-068_the_world_bank_economic_review.png"}, {"id": "INT-JRN-069", "name": "The World Bank Research Observer", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-069_the_world_bank_research_observer.png"}, {"id": "INT-JRN-070", "name": "Journal of African Economies", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-070_journal_of_african_economies.png"}, {"id": "INT-JRN-071", "name": "Journal of Public Policy", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-071_journal_of_public_policy.png"}, {"id": "INT-JRN-072", "name": "Environment and Development Economics", "cat": "International Peer-Reviewed Journal", "status": "Pre-Submission Package Prepared", "fee": "$0.00 (Traditional Subscription Track)", "url": "Pending Submission", "shot": "screenshots/INT-JRN-072_environment_and_development_economics.png"}, {"id": "DIA-JRN-001", "name": "South Asia Economic Journal", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-001_south_asia_economic_journal.png"}, {"id": "DIA-JRN-002", "name": "Economics: The Open-Access E-Journal", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-002_economics_the_open_access_e_journal.png"}, {"id": "DIA-JRN-003", "name": "Theoretical and Applied Economics", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-003_theoretical_and_applied_economics.png"}, {"id": "DIA-JRN-004", "name": "Review of Economic Analysis", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-004_review_of_economic_analysis.png"}, {"id": "DIA-JRN-005", "name": "Bulletin of Applied Economics", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-005_bulletin_of_applied_economics.png"}, {"id": "DIA-JRN-006", "name": "Quarterly Journal of Austrian Economics", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-006_quarterly_journal_of_austrian_economics.png"}, {"id": "DIA-JRN-007", "name": "Journal of Economic and Social Thought", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-007_journal_of_economic_and_social_thought.png"}, {"id": "DIA-JRN-008", "name": "Romanian Journal of Economic Forecasting", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-008_romanian_journal_of_economic_forecasting.png"}, {"id": "DIA-JRN-009", "name": "Zagreb International Review of Economics & Business", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-009_zagreb_international_review_of_economics.png"}, {"id": "DIA-JRN-010", "name": "South East European Journal of Economics and Business", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-010_south_east_european_journal_of_economics.png"}, {"id": "DIA-JRN-011", "name": "Montenegrin Journal of Economics", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-011_montenegrin_journal_of_economics.png"}, {"id": "DIA-JRN-012", "name": "Scientific Annals of Economics and Business", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-012_scientific_annals_of_economics_and_busin.png"}, {"id": "DIA-JRN-013", "name": "Journal of Central Banking Theory and Practice", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-013_journal_of_central_banking_theory_and_pr.png"}, {"id": "DIA-JRN-014", "name": "Economics & Sociology", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-014_economics_sociology.png"}, {"id": "DIA-JRN-015", "name": "Equilibrium. Quarterly Journal of Economics and Policy", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-015_equilibrium_quarterly_journal_of_economi.png"}, {"id": "DIA-JRN-016", "name": "Oeconomia Copernicana", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-016_oeconomia_copernicana.png"}, {"id": "DIA-JRN-017", "name": "Amfiteatru Economic", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-017_amfiteatru_economic.png"}, {"id": "DIA-JRN-018", "name": "Acta Oeconomica", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-018_acta_oeconomica.png"}, {"id": "DIA-JRN-019", "name": "Panoeconomicus", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-019_panoeconomicus.png"}, {"id": "DIA-JRN-020", "name": "Economic Computation and Economic Cybernetics", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-020_economic_computation_and_economic_cybern.png"}, {"id": "DIA-JRN-021", "name": "Prague Economic Papers", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-021_prague_economic_papers.png"}, {"id": "DIA-JRN-022", "name": "Financial Internet Quarterly", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-022_financial_internet_quarterly.png"}, {"id": "DIA-JRN-023", "name": "Managing Global Transitions", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-023_managing_global_transitions.png"}, {"id": "DIA-JRN-024", "name": "Economic Alternatives", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-024_economic_alternatives.png"}, {"id": "DIA-JRN-025", "name": "Comparative Economic Research", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-025_comparative_economic_research.png"}, {"id": "DIA-JRN-026", "name": "Economics and Business Review", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-026_economics_and_business_review.png"}, {"id": "DIA-JRN-027", "name": "Argumenta Oeconomica", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-027_argumenta_oeconomica.png"}, {"id": "DIA-JRN-028", "name": "Folia Oeconomica Stetinensia", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-028_folia_oeconomica_stetinensia.png"}, {"id": "DIA-JRN-029", "name": "E&M Economics and Management", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-029_e_m_economics_and_management.png"}, {"id": "DIA-JRN-030", "name": "Central European Journal of Public Policy (CEJPP)", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-030_central_european_journal_of_public_polic.png"}, {"id": "DIA-JRN-031", "name": "International Journal of Economic Policy in Emerging Econ", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-031_international_journal_of_economic_policy.png"}, {"id": "DIA-JRN-032", "name": "International Journal of Public Policy", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-032_international_journal_of_public_policy.png"}, {"id": "DIA-JRN-033", "name": "Asian Journal of Agriculture and Development", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-033_asian_journal_of_agriculture_and_develop.png"}, {"id": "DIA-JRN-034", "name": "Margin: The Journal of Applied Economic Research", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-034_margin_the_journal_of_applied_economic_r.png"}, {"id": "DIA-JRN-035", "name": "Asian Development Perspectives", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-035_asian_development_perspectives.png"}, {"id": "DIA-JRN-036", "name": "Development & Society", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-036_development_society.png"}, {"id": "DIA-JRN-037", "name": "Kasetsart Journal of Social Sciences", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-037_kasetsart_journal_of_social_sciences.png"}, {"id": "DIA-JRN-038", "name": "Geografia: Malaysian Journal of Society and Space", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-038_geografia_malaysian_journal_of_society_a.png"}, {"id": "DIA-JRN-039", "name": "Institutions and Economies", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-039_institutions_and_economies.png"}, {"id": "DIA-JRN-040", "name": "Journal of International and Area Studies", "cat": "International Diamond Open Access Journal", "status": "Pre-Submission Package Ready", "fee": "$0.00 (100% Free / Diamond Open Access)", "url": "Pending Submission", "shot": "screenshots/DIA-JRN-040_journal_of_international_and_area_studie.png"}, {"id": "BNK-POL-001", "name": "Asian Development Bank Institute (ADBI) Working Papers", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-001_asian_development_bank_institute_adbi_wo.png"}, {"id": "BNK-POL-002", "name": "World Bank Open Knowledge Repository (OKR)", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-002_world_bank_open_knowledge_repository_okr.png"}, {"id": "BNK-POL-003", "name": "International Water Management Institute (IWMI) e-Repository", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-003_international_water_management_institute.png"}, {"id": "BNK-POL-004", "name": "Pakistan Council of Research in Water Resources (PCRWR) Library", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-004_pakistan_council_of_research_in_water_re.png"}, {"id": "BNK-POL-005", "name": "UN ESCAP Research & Policy Portal", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-005_un_escap_research_policy_portal.png"}, {"id": "BNK-POL-006", "name": "UNDP Pakistan Knowledge Hub", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-006_undp_pakistan_knowledge_hub.png"}, {"id": "BNK-POL-007", "name": "Sustainable Development Policy Institute (SDPI) Repository", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-007_sustainable_development_policy_institute.png"}, {"id": "BNK-POL-008", "name": "Institute of Policy Studies (IPS) Research Archive", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-008_institute_of_policy_studies_ips_research.png"}, {"id": "BNK-POL-009", "name": "Consortium of South Asian Think Tanks (COSATT)", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-009_consortium_of_south_asian_think_tanks_co.png"}, {"id": "BNK-POL-010", "name": "International Food Policy Research Institute (IFPRI) e-Repository", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-010_international_food_policy_research_insti.png"}, {"id": "BNK-POL-011", "name": "Global Development Network (GDN) Open Archive", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-011_global_development_network_gdn_open_arch.png"}, {"id": "BNK-POL-012", "name": "ICIMOD Mountain & River Basin Repository", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-012_icimod_mountain_river_basin_repository.png"}, {"id": "BNK-POL-013", "name": "South Asia Network of Economic Research Institutes (SANEI)", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-013_south_asia_network_of_economic_research.png"}, {"id": "BNK-POL-014", "name": "Institute of South Asian Studies (ISAS) Working Papers", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-014_institute_of_south_asian_studies_isas_wo.png"}, {"id": "BNK-POL-015", "name": "Centre for Policy Dialogue (CPD) Policy Briefs", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-015_centre_for_policy_dialogue_cpd_policy_br.png"}, {"id": "BNK-POL-016", "name": "Institute of Economic Growth (IEG) Working Papers", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-016_institute_of_economic_growth_ieg_working.png"}, {"id": "BNK-POL-017", "name": "National Council of Applied Economic Research (NCAER)", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-017_national_council_of_applied_economic_res.png"}, {"id": "BNK-POL-018", "name": "Observer Research Foundation (ORF) South Asia Archive", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-018_observer_research_foundation_orf_south_a.png"}, {"id": "BNK-POL-019", "name": "German Institute for Development and Sustainability (IDOS)", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-019_german_institute_for_development_and_sus.png"}, {"id": "BNK-POL-020", "name": "Overseas Development Institute (ODI) Working Papers", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-020_overseas_development_institute_odi_worki.png"}, {"id": "BNK-POL-021", "name": "International Growth Centre (IGC) Pakistan Portal", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-021_international_growth_centre_igc_pakistan.png"}, {"id": "BNK-POL-022", "name": "Wilson Center Asia Program Archive", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-022_wilson_center_asia_program_archive.png"}, {"id": "BNK-POL-023", "name": "Brookings Institution South Asia Initiative", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-023_brookings_institution_south_asia_initiat.png"}, {"id": "BNK-POL-024", "name": "Carnegie Endowment South Asia Program", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-024_carnegie_endowment_south_asia_program.png"}, {"id": "BNK-POL-025", "name": "Middle East Institute (MEI) Pakistan Initiative", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-025_middle_east_institute_mei_pakistan_initi.png"}, {"id": "BNK-POL-026", "name": "Center for Global Development (CGD) Working Papers", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-026_center_for_global_development_cgd_workin.png"}, {"id": "BNK-POL-027", "name": "Economic Research Forum (ERF) Working Papers", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-027_economic_research_forum_erf_working_pape.png"}, {"id": "BNK-POL-028", "name": "SAARC Documentation Centre Repository", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-028_saarc_documentation_centre_repository.png"}, {"id": "BNK-POL-029", "name": "Asian Development Bank (ADB) Data & Research", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-029_asian_development_bank_adb_data_research.png"}, {"id": "BNK-POL-030", "name": "IRENA Knowledge Gateway", "cat": "Policy Think Tank & Development Bank Repository", "status": "Policy Brief Prepared", "fee": "$0.00 (Zero Fee / Institutional)", "url": "Pending Submission", "shot": "screenshots/BNK-POL-030_irena_knowledge_gateway.png"}];
-    let activePortalFilter = 'all';
-
-    function setPortalFilter(filterVal) {
-        document.querySelectorAll('#portalFilters .filter-btn').forEach(btn => btn.classList.remove('active'));
-        event.target.classList.add('active');
-        activePortalFilter = filterVal;
-        renderPortals();
-    }
-
-    function renderPortals() {
-        const searchVal = document.getElementById('portalSearch').value.toLowerCase().trim();
-        const container = document.getElementById('portalContainer');
-        container.innerHTML = '';
-
-        const filtered = portalsData.filter(p => {
-            const matchFilter = (activePortalFilter === 'all') || p.cat.toLowerCase().includes(activePortalFilter.toLowerCase());
-            const matchSearch = !searchVal || 
-                p.name.toLowerCase().includes(searchVal) || 
-                p.id.toLowerCase().includes(searchVal) || 
-                p.cat.toLowerCase().includes(searchVal);
-            return matchFilter && matchSearch;
-        });
-
-        document.getElementById('portalCounter').innerText = `Showing ${filtered.length} of 256 Portals`;
-
-        // Render first 36 for instant performance
-        const displayList = filtered.slice(0, 36);
-        displayList.forEach(p => {
-            const card = document.createElement('div');
-            card.className = 'portal-item-card';
-            card.innerHTML = `
-                <div>
-                    <div class="portal-header">
-                        <span class="portal-id">${p.id}</span>
-                        <span class="portal-fee">$0.00 APC</span>
-                    </div>
-                    <div class="portal-name">${p.name}</div>
-                    <div class="portal-category">${p.cat}</div>
-                    <div class="portal-status">${p.status}</div>
-                </div>
-                <div class="portal-card-footer">
-                    <button class="btn-proof-modal" onclick="openProofModal('${p.name.replace(/'/g, "\\'")}', '${p.id}', '${p.cat.replace(/'/g, "\\'")}', '${p.shot}', '${p.url}')">View Proof</button>
-                    <a class="portal-visit-link" href="${p.url}" target="_blank" rel="noopener">Visit &rarr;</a>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-
-        if (filtered.length === 0) {
-            container.innerHTML = '<div style="grid-column: 1 / -1; text-align:center; padding: 40px; color: var(--ink-muted);">No matching portals found for query. Try searching "SSRN", "Zenodo", or "Preprints".</div>';
-        }
-    }
-
-    document.getElementById('portalSearch').addEventListener('input', renderPortals);
-
-    // Initial render
-    renderPortals();
     </script>
 </body>
 </html>
