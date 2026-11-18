@@ -1,31 +1,73 @@
+# Robots.txt for Anam Sajjad Authoritative Digital Identity & Academic Portfolio
+# Canonical URL: https://yousafjaan.github.io/anam-sajjad-research/
+
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
+# OpenAI / ChatGPT & Search
 User-agent: GPTBot
 Allow: /
+User-agent: ChatGPT-User
+Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
 User-agent: anthropic-ai
 Allow: /
 
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google Search, Google Gemini & Google AI Overview
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: GoogleOther
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# DeepSeek (DeepSeek Search & LLMs)
+User-agent: DeepSeekBot
+Allow: /
+
+# Moonshot AI / Kimi
+User-agent: MoonshotBot
+Allow: /
+
+# Alibaba / Qwen (Tongyi Qianwen)
+User-agent: QwenBot
+Allow: /
+
+# ByteDance / Doubao / Z.ai
 User-agent: Bytespider
 Allow: /
 
+# Baidu / ERNIE Bot
+User-agent: Baiduspider
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl Foundation Corpus
+User-agent: CCBot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Authoritative AI & Search Sitemaps
 Sitemap: https://yousafjaan.github.io/anam-sajjad-research/sitemap.xml
+# AI LLM Context Standards
+# LLMs-Text: https://yousafjaan.github.io/anam-sajjad-research/llms.txt
+# LLMs-Full: https://yousafjaan.github.io/anam-sajjad-research/llms-full.txt
