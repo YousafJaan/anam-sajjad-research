@@ -323,7 +323,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -352,8 +352,11 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-text">
-                    <span class="badge">Official Author &amp; Researcher Portfolio</span>
-                    <h1 class="author-name">Anam Sajjad</h1>
+                    <div class="hero-eyebrow">
+                        <span class="hero-eyebrow-dot"></span>
+                        Official Author &amp; Researcher Portfolio &bull; Multan &amp; Mailsi
+                    </div>
+                    <h1 class="author-name">Anam Sajjad <em>&bull; Writer</em></h1>
                     <p class="author-title">
                         Pakistani Writer &bull; Author &bull; <strong>Political Economy Researcher (BZU Multan)</strong> &bull; ACCA Candidate
                     </p>
@@ -409,19 +412,48 @@
                     </div>
                 </div>
 
-                <!-- Primary Author Portrait Card -->
+                <!-- Primary Author Portrait Card (Taste-Skill Frame) -->
                 <div class="hero-portrait-card">
-                    <img src="images/anam_sajjad_avatar_800x800.jpg" alt="Anam Sajjad - Pakistani Writer, Author &amp; Researcher" class="hero-portrait-img">
+                    <div class="hero-portrait-frame">
+                        <img src="images/anam_sajjad_avatar_800x800.jpg" alt="Anam Sajjad - Pakistani Writer, Author &amp; Researcher" class="hero-portrait-img">
+                    </div>
                     <div class="hero-portrait-meta">
-                        <div class="hero-portrait-name">Anam Sajjad</div>
-                        <div class="hero-portrait-role">Writer &bull; Author &bull; Political Economy Scholar</div>
-                        <div class="hero-portrait-badge">
+                        <div>
+                            <div class="hero-portrait-name">Anam Sajjad</div>
+                            <div class="hero-portrait-role">Writer &bull; Author &bull; BZU Multan</div>
+                        </div>
+                        <div class="hero-portrait-verified">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Verified Academic &amp; Literary Identity
+                            Verified Identity
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </header>
+
+    <!-- QUANTITATIVE TELEMETRY DASHBOARD (Macroeconomic Indicators) -->
+    <section class="telemetry-section">
+        <div class="container">
+            <div class="telemetry-grid">
+                <div class="telemetry-card">
+                    <div class="telemetry-label">Energy Sector Circular Debt</div>
+                    <div class="telemetry-stat">Rs 5.286T</div>
+                    <div class="telemetry-desc">5.4% of national GDP absorbed by take-or-pay capacity obligations guaranteeing Rs 2.18T annually across 45,885 MW.</div>
+                </div>
+                <div class="telemetry-card">
+                    <div class="telemetry-label">Water Conveyance Deficit</div>
+                    <div class="telemetry-stat">64% Loss</div>
+                    <div class="telemetry-desc">Indus Basin Irrigation System live reservoir carryover buffer stands at only 30 days vs 1,000-day global benchmarks.</div>
+                </div>
+                <div class="telemetry-card">
+                    <div class="telemetry-label">Youth Demographic Capital</div>
+                    <div class="telemetry-stat">160.11M</div>
+                    <div class="telemetry-desc">67% of Pakistan's 241.49M population is under 30, while 81% of net federal tax revenues are consumed by debt service.</div>
+                </div>
+            </div>
+        </div>
+    </section>
         </div>
     </header>
 
@@ -710,97 +742,69 @@
             <div class="gallery-grid">
                 <!-- Portrait 1: Primary Office -->
                 <div class="gallery-card">
-                    <div class="gallery-img-wrap">
-                        <span class="gallery-badge">Primary Author Portrait</span>
-                        <img src="images/gallery_01_office.jpg" alt="Anam Sajjad - Modern Office Portrait" class="gallery-img" loading="lazy">
-                    </div>
-                    <div class="gallery-caption">
-                        <h4>Modern Office Portrait</h4>
-                        <p>Selected primary author headshot with mustard drape and navy blazer, representing scholarly and administrative focus.</p>
-                        <div class="gallery-license">
-                            <span>CC BY-SA 4.0</span>
-                            <a href="images/gallery_01_office.jpg" target="_blank" rel="noopener">High-Res JPEG</a>
+                    <img src="images/gallery_01_office.jpg" alt="Anam Sajjad - Modern Office Portrait" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div class="gallery-title">Modern Office Portrait</div>
+                            <span style="font-size: 0.75rem; color: #cbd5e1;">Primary Scholar &amp; Policy Headshot</span>
                         </div>
+                        <a href="images/gallery_01_office.jpg" target="_blank" rel="noopener" class="gallery-btn">Download JPEG &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Portrait 2: Embroidered Elegance -->
                 <div class="gallery-card">
-                    <div class="gallery-img-wrap">
-                        <span class="gallery-badge">Literary Presentation</span>
-                        <img src="images/gallery_02_elegance.jpg" alt="Anam Sajjad - Embroidered Elegance" class="gallery-img" loading="lazy">
-                    </div>
-                    <div class="gallery-caption">
-                        <h4>Embroidered Elegance</h4>
-                        <p>Formal literary presentation suited for book jacket flaps, conference speaker cards, and publisher catalogs.</p>
-                        <div class="gallery-license">
-                            <span>CC BY-SA 4.0</span>
-                            <a href="images/gallery_02_elegance.jpg" target="_blank" rel="noopener">High-Res JPEG</a>
+                    <img src="images/gallery_02_elegance.jpg" alt="Anam Sajjad - Embroidered Elegance" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div class="gallery-title">Embroidered Elegance</div>
+                            <span style="font-size: 0.75rem; color: #cbd5e1;">Formal Literary Presentation</span>
                         </div>
+                        <a href="images/gallery_02_elegance.jpg" target="_blank" rel="noopener" class="gallery-btn">Download JPEG &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Portrait 3: Burgundy Embroidery -->
                 <div class="gallery-card">
-                    <div class="gallery-img-wrap">
-                        <span class="gallery-badge">Cultural Non-Fiction</span>
-                        <img src="images/gallery_03_burgundy.jpg" alt="Anam Sajjad - Burgundy Embroidery Portrait" class="gallery-img" loading="lazy">
-                    </div>
-                    <div class="gallery-caption">
-                        <h4>Burgundy Embroidery</h4>
-                        <p>Formal portrait selected for cultural essay features and philosophical discussions on <em>The Weight of Nodding</em>.</p>
-                        <div class="gallery-license">
-                            <span>CC BY-SA 4.0</span>
-                            <a href="images/gallery_03_burgundy.jpg" target="_blank" rel="noopener">High-Res JPEG</a>
+                    <img src="images/gallery_03_burgundy.jpg" alt="Anam Sajjad - Burgundy Embroidery Portrait" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div class="gallery-title">Burgundy Embroidery</div>
+                            <span style="font-size: 0.75rem; color: #cbd5e1;">Cultural Keynote Portrait</span>
                         </div>
+                        <a href="images/gallery_03_burgundy.jpg" target="_blank" rel="noopener" class="gallery-btn">Download JPEG &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Portrait 4: Outdoor Reflection -->
                 <div class="gallery-card">
-                    <div class="gallery-img-wrap">
-                        <span class="gallery-badge">Environment &amp; Reflection</span>
-                        <img src="images/gallery_04_outdoor.jpg" alt="Anam Sajjad - Serene Outdoor in Maroon" class="gallery-img" loading="lazy">
-                    </div>
-                    <div class="gallery-caption">
-                        <h4>Serene Outdoor in Maroon</h4>
-                        <p>Author-in-environment portrait capturing the calm, grounded disposition of rural and semi-urban South Punjab.</p>
-                        <div class="gallery-license">
-                            <span>CC BY-SA 4.0</span>
-                            <a href="images/gallery_04_outdoor.jpg" target="_blank" rel="noopener">High-Res JPEG</a>
+                    <img src="images/gallery_04_outdoor.jpg" alt="Anam Sajjad - Serene Outdoor in Maroon" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div class="gallery-title">Serene Outdoor in Maroon</div>
+                            <span style="font-size: 0.75rem; color: #cbd5e1;">Indus Basin Environment</span>
                         </div>
+                        <a href="images/gallery_04_outdoor.jpg" target="_blank" rel="noopener" class="gallery-btn">Download JPEG &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Portrait 5: Thoughtful Café -->
                 <div class="gallery-card">
-                    <div class="gallery-img-wrap">
-                        <span class="gallery-badge">Author at Work</span>
-                        <img src="images/gallery_05_cafe.jpg" alt="Anam Sajjad - Thoughtful Café Portrait" class="gallery-img" loading="lazy">
-                    </div>
-                    <div class="gallery-caption">
-                        <h4>Thoughtful Café Study</h4>
-                        <p>Contemplative writing atmosphere representing literary drafting, essay revision, and analytical composition.</p>
-                        <div class="gallery-license">
-                            <span>CC BY-SA 4.0</span>
-                            <a href="images/gallery_05_cafe.jpg" target="_blank" rel="noopener">High-Res JPEG</a>
+                    <img src="images/gallery_05_cafe.jpg" alt="Anam Sajjad - Thoughtful Café Portrait" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div>
+                            <div class="gallery-title">Thoughtful Café Study</div>
+                            <span style="font-size: 0.75rem; color: #cbd5e1;">Literary Reflection</span>
                         </div>
+                        <a href="images/gallery_05_cafe.jpg" target="_blank" rel="noopener" class="gallery-btn">Download JPEG &rarr;</a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Licensing Note Card -->
-                <div class="gallery-card" style="background:#f8fafc; justify-content:center; padding:24px;">
-                    <div style="text-align:center;">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" style="margin:0 auto 12px auto;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-                        <h4 style="font-family:'Merriweather',serif; color:#0f172a; margin-bottom:8px;">Open Licensing Notice</h4>
-                        <p style="font-size:0.86rem; color:#64748b; line-height:1.5;">
-                            All author portraits are released under <strong>Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</strong>. Press, journals, and Wikipedia editors may freely use these images with attribution:
-                        </p>
-                        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:6px; padding:8px; font-size:0.75rem; color:#334155; margin-top:10px; font-family:monospace;">
-                            Photo: Anam Sajjad (Official Author Portrait), CC BY-SA 4.0
-                        </div>
-                    </div>
-                </div>
+            <!-- Single Line Licensing Credit (Taste-Skill House Rule 1) -->
+            <p style="text-align: center; font-size: 0.84rem; color: var(--ink-muted); margin-top: 24px;">
+                All author portraits released under <strong>Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</strong>. Press &amp; publishers: free for attribution. Metadata 100% EXIF/GPS stripped.
+            </p>
             </div>
         </section>
 
