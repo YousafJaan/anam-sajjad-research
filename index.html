@@ -181,11 +181,8 @@
             "https://osf.io/jefgv/",
             "https://sciprofiles.com/profile/anamsajjad",
             "https://bzu-pk.academia.edu/AnamSajjad",
-            "https://sujo.usindh.edu.pk/index.php/Grassroots/user/profile",
-            "https://njssh.nust.edu.pk/index.php/njssh/user/profile",
-            "https://sujo.usindh.edu.pk/index.php/SURJ/user/profile",
-            "https://ojs.jdss.org.pk/journal/user/profile",
-            "https://ojs.pssr.org.pk/journal/user/profile"
+            "https://github.com/yousafjaan/anam-sajjad-research",
+            "https://doi.org/10.5281/zenodo.24054373"
           ]
         },
         {
@@ -327,6 +324,15 @@
       ]
     }
     </script>
+    <!-- Theme Detection & FOUT Prevention -->
+    <script>
+    (function() {
+        var urlTheme = new URLSearchParams(window.location.search).get('theme');
+        var savedTheme = localStorage.getItem('anam_portfolio_theme');
+        var theme = urlTheme || savedTheme || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+    })();
+    </script>
 </head>
 <body>
 
@@ -348,15 +354,31 @@
                 <li><a href="Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf" class="nav-btn-highlight" target="_blank">Paper PDF &darr;</a></li>
             </ul>
             
-            <button class="nav-mobile-toggle" onclick="toggleDrawer()" aria-label="Open Navigation Menu">
-                <span>&equiv;</span> Menu
-            </button>
+            <div class="nav-actions-group">
+                <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Light or Dark Theme" title="Toggle Theme (Dark / Light)">
+                    <span class="theme-switch-track">
+                        <span class="theme-switch-icon icon-dark">&#127769;</span>
+                        <span class="theme-switch-icon icon-light">&#9728;&#65039;</span>
+                        <span class="theme-switch-thumb"></span>
+                    </span>
+                    <span class="theme-toggle-label" id="theme-label">Dark</span>
+                </button>
+                <button class="nav-mobile-toggle" onclick="toggleDrawer()" aria-label="Open Navigation Menu">
+                    <span>&equiv;</span> Menu
+                </button>
+            </div>
         </nav>
     </header>
 
     <!-- FULLSCREEN BLURRED MOBILE MENU DRAWER -->
     <div class="mobile-drawer-overlay" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
         <button class="mobile-drawer-close" onclick="toggleDrawer()" aria-label="Close Navigation Menu">&times;</button>
+        <div class="mobile-drawer-theme-wrap">
+            <button id="drawer-theme-toggle" class="theme-toggle-drawer-btn" onclick="toggleTheme()">
+                <span id="drawer-theme-icon">&#9728;&#65039;</span>
+                <span id="drawer-theme-label">Switch to Light Theme</span>
+            </button>
+        </div>
         <ul class="mobile-drawer-nav">
             <li><a href="#home" onclick="toggleDrawer()">Home</a></li>
             <li><a href="#authoritative-bio" onclick="toggleDrawer()">About</a></li>
@@ -582,13 +604,7 @@
                         </div>
                     </div>
                     
-                    <div class="affiliation-unit">
-                        <div class="affiliation-monogram">SU</div>
-                        <div>
-                            <h4>University of Sindh (Grassroots)</h4>
-                            <p>Verified Author &bull; <a href="https://sujo.usindh.edu.pk/index.php/Grassroots/user/profile" target="_blank" rel="noopener" style="color:var(--accent-cyan);">Live Profile &rarr;</a></p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -687,6 +703,36 @@
 
     <!-- JAVASCRIPT CONTROLLERS -->
     <script>
+    // Dual Theme System Controller (Obsidian Dark & Editorial Light)
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('anam_portfolio_theme', theme);
+        
+        const label = document.getElementById('theme-label');
+        const drawerLabel = document.getElementById('drawer-theme-label');
+        const drawerIcon = document.getElementById('drawer-theme-icon');
+        
+        if (theme === 'light') {
+            if (label) label.textContent = 'Light';
+            if (drawerLabel) drawerLabel.textContent = 'Switch to Dark Theme';
+            if (drawerIcon) drawerIcon.innerHTML = '&#127769;';
+        } else {
+            if (label) label.textContent = 'Dark';
+            if (drawerLabel) drawerLabel.textContent = 'Switch to Light Theme';
+            if (drawerIcon) drawerIcon.innerHTML = '&#9728;&#65039;';
+        }
+    }
+
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        applyTheme(currentTheme);
+    });
     function toggleDrawer() {
         const drawer = document.getElementById('mobile-drawer');
         drawer.classList.toggle('active');
