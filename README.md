@@ -1,43 +1,45 @@
-# 🚀 Deploying Anum Sajjad's Academic Portfolio to GitHub Pages
+# Anam Sajjad | Official Author & Academic Research Repository
 
-This web package is pre-configured with **Schema.org JSON-LD Structured Data** to force Google Search and the Google Knowledge Graph to recognize **Anum Sajjad** as a verified academic researcher and rank this website on **Page 1**.
+[![Official Website](https://img.shields.io/badge/Official_Website-Live-emerald?style=flat-square&logo=githubpages)](https://yousafjaan.github.io/anam-sajjad-research/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24054373.svg)](https://doi.org/10.5281/zenodo.24054373)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0004--6169--1703-green.svg)](https://orcid.org/0009-0004-6169-1703)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
----
-
-## ⚡ 2-Minute Free Hosting Setup on GitHub Pages
-
-You don't need any server, domain fees, or coding knowledge. Follow these 3 simple steps:
-
-### Step 1: Create a Free GitHub Repository
-1. Log in to [github.com](https://github.com) (or create a free account).
-2. Click **New Repository** (green button).
-3. Name the repository: `anum-sajjad.github.io` *(Replace with your GitHub username if different, e.g., `yourusername.github.io`)*.
-4. Set visibility to **Public**.
-5. Check **Add a README file** and click **Create repository**.
-
-### Step 2: Upload Portfolio Files
-1. Inside the new repository, click **Add file** > **Upload files**.
-2. Drag and drop both files from this folder:
-   - `index.html`
-   - `style.css`
-3. Click **Commit changes**.
-
-### Step 3: Activate GitHub Pages
-1. In your repository, go to **Settings** (tab at the top right).
-2. On the left sidebar, click **Pages**.
-3. Under **Branch**, select `main` (or `master`) and folder `/ (root)`.
-4. Click **Save**.
-
-🎉 **Your website is live!** In 60 seconds, your portfolio will be accessible worldwide at:  
-👉 `https://anum-sajjad.github.io/`
+> **Canonical Web Presence:** [https://yousafjaan.github.io/anam-sajjad-research/](https://yousafjaan.github.io/anam-sajjad-research/)  
+> **Standalone Light Edition:** [https://yousafjaan.github.io/anam-sajjad-research/light.html](https://yousafjaan.github.io/anam-sajjad-research/light.html)  
+> **Authoritative Biography & Entity Registry:** Mailsi, Punjab, Pakistan • Bahauddin Zakariya University (BZU) Multan • ACCA Candidate
 
 ---
 
-## 🔍 How to Submit to Google for Rapid 48-Hour Indexing
+## 📌 Executive Overview
 
-1. Go to [Google Search Console](https://search.google.com/search-console).
-2. Sign in with your Google Account.
-3. Select **URL prefix** and enter `https://anum-sajjad.github.io/`.
-4. Verify ownership (using the HTML tag option or GitHub Pages domain).
-5. Paste your URL into the top search bar and click **Request Indexing**.
-6. Google's crawler will index the `Person` JSON-LD schema within 24 to 72 hours!
+This repository hosts the official source code, high-density Highwire Press / Schema.org metadata, and complete empirical research package for **Anam Sajjad** (Pakistani writer, essayist, and political economy researcher).
+
+### Verified Publications & Monographs:
+1. **Master Empirical Monograph:**  
+   *Pakistan Is Not Poor, It Is Poorly Managed: An Empirical Investigation of Energy, Water, and Demographics in Pakistan*  
+   - **Authors:** Anam Sajjad (Lead Author, BZU Multan) & M. Yousaf (Co-Author, Emerson University Multan)  
+   - **Permanent Zenodo DOI:** [10.5281/zenodo.24054373](https://doi.org/10.5281/zenodo.24054373)  
+   - **Full Monograph PDF:** [`Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf`](https://yousafjaan.github.io/anam-sajjad-research/Pakistan_Is_Not_Poor_It_Is_Poorly_Managed.pdf)
+2. **The Weight of Nodding** (Social Philosophy & Moral Compliance Monograph)
+3. **Rija: Ek Beti Ki Sachi Aap Beeti** (Narrative Memoir of Female Educational Aspiration)
+4. **Maawara (ماورا)** (Urdu Literary Novel)
+
+---
+
+## 🌐 Search Engine & AI Knowledge Graph Grounding
+
+This platform is structured for instant indexing by Google Search, Google Scholar, Bing, and major AI reasoning engines (Perplexity, ChatGPT, Gemini, Copilot):
+
+- **Canonical URL:** `https://yousafjaan.github.io/anam-sajjad-research/`
+- **Sitemap XML:** `https://yousafjaan.github.io/anam-sajjad-research/sitemap.xml`
+- **Machine Discovery (llms.txt):** `https://yousafjaan.github.io/anam-sajjad-research/llms.txt`
+- **Full Semantic Dossier (llms-full.txt):** `https://yousafjaan.github.io/anam-sajjad-research/llms-full.txt`
+- **Schema.org Graph:** Validated `@type: Person`, `ScholarlyArticle`, `ProfilePage`, `SpeakableSpecification`
+
+---
+
+## 📬 Contact & Correspondence
+- **Lead Author:** Anam Sajjad — `anoom994@gmail.com`
+- **Submitting Author & Repository Maintainer:** M. Yousaf — `mrjosephofficial085@gmail.com`
+- **WhatsApp:** +92-328-6414134
